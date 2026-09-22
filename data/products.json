@@ -1,144 +1,1262 @@
 [
   {
-    "id": "DAL001", "name": "Moong Dal",      "category": "dal-pulses",  "weight": "1 kg",   "price": 145, "mrp": 160, "image": "images/products/moong-dal.webp",    "available": true,  "featured": true,  "offer": true
+    "id": "ITM-001",
+    "name": "Moong Sabut",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 67,
+    "mrp": 90,
+    "image": "images/products/moong-dal.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
   },
   {
-    "id": "DAL002", "name": "Masoor Dal",     "category": "dal-pulses",  "weight": "1 kg",   "price": 120, "mrp": 135, "image": "images/products/masoor-dal.webp",   "available": true,  "featured": true,  "offer": false
+    "id": "ITM-002",
+    "name": "Moong Chilka",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 69,
+    "mrp": 90,
+    "image": "images/products/moong-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "DAL003", "name": "Chana Dal",      "category": "dal-pulses",  "weight": "1 kg",   "price": 110, "mrp": 125, "image": "images/products/chana-dal.webp",    "available": true,  "featured": false, "offer": false
+    "id": "ITM-003",
+    "name": "Moong Dhuli",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 74,
+    "mrp": 90,
+    "image": "images/products/moong-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "DAL004", "name": "Toor Dal",       "category": "dal-pulses",  "weight": "1 kg",   "price": 155, "mrp": 170, "image": "images/products/toor-dal.webp",     "available": true,  "featured": false, "offer": true
+    "id": "ITM-004",
+    "name": "Urad Sabut",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 73,
+    "mrp": 90,
+    "image": "images/products/urad-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "DAL005", "name": "Urad Dal",       "category": "dal-pulses",  "weight": "1 kg",   "price": 135, "mrp": 150, "image": "images/products/urad-dal.webp",     "available": true,  "featured": false, "offer": false
+    "id": "ITM-005",
+    "name": "Urad Chilka",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 75,
+    "mrp": 90,
+    "image": "images/products/urad-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "DAL006", "name": "Rajma",          "category": "dal-pulses",  "weight": "500 g",  "price": 90,  "mrp": 100, "image": "images/products/rajma.webp",        "available": true,  "featured": false, "offer": false
+    "id": "ITM-006",
+    "name": "Urad Dhuli",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 83,
+    "mrp": 90,
+    "image": "images/products/urad-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "DAL007", "name": "Kabuli Chana",   "category": "dal-pulses",  "weight": "500 g",  "price": 85,  "mrp": 95,  "image": "images/products/kabuli-chana.webp", "available": true,  "featured": false, "offer": false
+    "id": "ITM-007",
+    "name": "Arhar Dal",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 83,
+    "mrp": 90,
+    "image": "images/products/toor-dal.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
   },
   {
-    "id": "DAL008", "name": "Black Chana",    "category": "dal-pulses",  "weight": "1 kg",   "price": 100, "mrp": 115, "image": "images/products/black-chana.webp",  "available": true,  "featured": false, "offer": false
-  },
-
-  {
-    "id": "RIC001", "name": "Basmati Rice",   "category": "rice-grains", "weight": "5 kg",   "price": 450, "mrp": 500, "image": "images/products/basmati-rice.webp", "available": true,  "featured": true,  "offer": true
-  },
-  {
-    "id": "RIC002", "name": "Regular Rice",   "category": "rice-grains", "weight": "5 kg",   "price": 280, "mrp": 300, "image": "images/products/regular-rice.webp", "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "RIC003", "name": "Poha",           "category": "rice-grains", "weight": "500 g",  "price": 50,  "mrp": 60,  "image": "images/products/poha.webp",         "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "RIC004", "name": "Dalia",          "category": "rice-grains", "weight": "500 g",  "price": 55,  "mrp": 65,  "image": "images/products/dalia.webp",        "available": true,  "featured": false, "offer": false
+    "id": "ITM-008",
+    "name": "Kala Chana",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 52,
+    "mrp": 90,
+    "image": "images/products/black-chana.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "RIC005", "name": "Suji",           "category": "rice-grains", "weight": "1 kg",   "price": 60,  "mrp": 70,  "image": "images/products/suji.webp",         "available": true,  "featured": false, "offer": false
+    "id": "ITM-009",
+    "name": "Chana Dal",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 52,
+    "mrp": 90,
+    "image": "images/products/chana-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "RIC006", "name": "Besan",          "category": "rice-grains", "weight": "1 kg",   "price": 75,  "mrp": 85,  "image": "images/products/besan.webp",        "available": true,  "featured": false, "offer": false
-  },
-
-  {
-    "id": "SPC001", "name": "Turmeric Powder",    "category": "spices", "weight": "200 g",  "price": 55,  "mrp": 65,  "image": "images/products/turmeric.webp",     "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "SPC002", "name": "Red Chilli Powder",  "category": "spices", "weight": "200 g",  "price": 65,  "mrp": 75,  "image": "images/products/red-chilli.webp",   "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "SPC003", "name": "Coriander Powder",   "category": "spices", "weight": "200 g",  "price": 50,  "mrp": 60,  "image": "images/products/coriander.webp",    "available": true,  "featured": true,  "offer": false
-  },
-  {
-    "id": "SPC004", "name": "Garam Masala",       "category": "spices", "weight": "100 g",  "price": 60,  "mrp": 75,  "image": "images/products/garam-masala.webp", "available": true,  "featured": false, "offer": true
+    "id": "ITM-010",
+    "name": "Kabali Chana",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 63,
+    "mrp": 90,
+    "image": "images/products/kabuli-chana.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "SPC005", "name": "Cumin Seeds",        "category": "spices", "weight": "100 g",  "price": 45,  "mrp": 55,  "image": "images/products/cumin.webp",        "available": true,  "featured": false, "offer": false
+    "id": "ITM-011",
+    "name": "Mix Daal",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 71,
+    "mrp": 90,
+    "image": "images/products/moong-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "SPC006", "name": "Mustard Seeds",      "category": "spices", "weight": "100 g",  "price": 35,  "mrp": 45,  "image": "images/products/mustard.webp",      "available": true,  "featured": false, "offer": false
+    "id": "ITM-012",
+    "name": "Kali Masur",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 58,
+    "mrp": 90,
+    "image": "images/products/masoor-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "SPC007", "name": "Black Pepper",       "category": "spices", "weight": "100 g",  "price": 80,  "mrp": 95,  "image": "images/products/black-pepper.webp", "available": false, "featured": false, "offer": false
+    "id": "ITM-013",
+    "name": "Malka Dal",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 55,
+    "mrp": 90,
+    "image": "images/products/masoor-dal.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "SPC008", "name": "Hing (Asafoetida)", "category": "spices",  "weight": "50 g",   "price": 70,  "mrp": 80,  "image": "images/products/hing.webp",         "available": true,  "featured": false, "offer": false
-  },
-
-  {
-    "id": "DRF001", "name": "Almonds",      "category": "dry-fruits", "weight": "250 g",  "price": 220, "mrp": 260, "image": "images/products/almonds.webp",    "available": true,  "featured": true,  "offer": true
-  },
-  {
-    "id": "DRF002", "name": "Cashews",      "category": "dry-fruits", "weight": "250 g",  "price": 280, "mrp": 320, "image": "images/products/cashews.webp",    "available": true,  "featured": true,  "offer": false
-  },
-  {
-    "id": "DRF003", "name": "Raisins",      "category": "dry-fruits", "weight": "250 g",  "price": 90,  "mrp": 110, "image": "images/products/raisins.webp",    "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "DRF004", "name": "Walnuts",      "category": "dry-fruits", "weight": "250 g",  "price": 240, "mrp": 280, "image": "images/products/walnuts.webp",    "available": true,  "featured": false, "offer": true
+    "id": "ITM-014",
+    "name": "Rajma Chitra",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 80,
+    "mrp": 90,
+    "image": "images/products/rajma.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
   },
   {
-    "id": "DRF005", "name": "Pistachios",   "category": "dry-fruits", "weight": "250 g",  "price": 350, "mrp": 400, "image": "images/products/pistachios.webp", "available": true,  "featured": false, "offer": false
+    "id": "ITM-015",
+    "name": "Rajma Jammu",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 110,
+    "mrp": 150,
+    "image": "images/products/rajma.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "DRF006", "name": "Dates",        "category": "dry-fruits", "weight": "500 g",  "price": 150, "mrp": 180, "image": "images/products/dates.webp",      "available": true,  "featured": false, "offer": false
-  },
-
-  {
-    "id": "OIL001", "name": "Mustard Oil",    "category": "oil-ghee", "weight": "1 L",    "price": 170, "mrp": 190, "image": "images/products/mustard-oil.webp",    "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "OIL002", "name": "Sunflower Oil",  "category": "oil-ghee", "weight": "1 L",    "price": 155, "mrp": 175, "image": "images/products/sunflower-oil.webp",  "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "OIL003", "name": "Refined Oil",    "category": "oil-ghee", "weight": "1 L",    "price": 145, "mrp": 165, "image": "images/products/refined-oil.webp",    "available": true,  "featured": false, "offer": true
-  },
-  {
-    "id": "OIL004", "name": "Pure Ghee",      "category": "oil-ghee", "weight": "500 ml", "price": 320, "mrp": 360, "image": "images/products/ghee.webp",           "available": true,  "featured": true,  "offer": false
-  },
-
-  {
-    "id": "SNK001", "name": "Parle-G Biscuits", "category": "snacks", "weight": "800 g",  "price": 80,  "mrp": 90,  "image": "images/products/parle-g.webp",   "available": true,  "featured": false, "offer": false
+    "id": "ITM-016",
+    "name": "White Lobiya",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 64,
+    "mrp": 80,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "SNK002", "name": "Aloo Bhujia",      "category": "snacks", "weight": "400 g",  "price": 90,  "mrp": 100, "image": "images/products/aloo-bhujia.webp","available": true,  "featured": false, "offer": false
+    "id": "ITM-017",
+    "name": "Red Lobiya",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 82,
+    "mrp": 100,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "SNK003", "name": "Lay's Chips",       "category": "snacks", "weight": "26 g",   "price": 20,  "mrp": 20,  "image": "images/products/lays.webp",      "available": true,  "featured": false, "offer": false
+    "id": "ITM-018",
+    "name": "Moth",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 61,
+    "mrp": 80,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "SNK004", "name": "Namkeen Mix",       "category": "snacks", "weight": "200 g",  "price": 50,  "mrp": 60,  "image": "images/products/namkeen.webp",   "available": true,  "featured": false, "offer": false
-  },
-
-  {
-    "id": "BEV001", "name": "Tata Tea Gold",   "category": "beverages", "weight": "500 g",  "price": 240, "mrp": 265, "image": "images/products/tata-tea.webp",    "available": true,  "featured": true,  "offer": true
-  },
-  {
-    "id": "BEV002", "name": "Bru Coffee",      "category": "beverages", "weight": "200 g",  "price": 180, "mrp": 200, "image": "images/products/bru-coffee.webp",  "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "BEV003", "name": "Horlicks",        "category": "beverages", "weight": "500 g",  "price": 290, "mrp": 330, "image": "images/products/horlicks.webp",    "available": true,  "featured": false, "offer": false
-  },
-  {
-    "id": "BEV004", "name": "Real Fruit Juice", "category": "beverages","weight": "1 L",    "price": 100, "mrp": 115, "image": "images/products/real-juice.webp",  "available": true,  "featured": false, "offer": false
-  },
-
-  {
-    "id": "OTH001", "name": "Tata Salt",  "category": "other", "weight": "1 kg",  "price": 28,  "mrp": 30,  "image": "images/products/salt.webp",    "available": true,  "featured": false, "offer": false
+    "id": "ITM-019",
+    "name": "Khand",
+    "category": "other",
+    "weight": "1 kg",
+    "price": 110,
+    "mrp": 150,
+    "image": "images/products/sugar.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "OTH002", "name": "Sugar",      "category": "other", "weight": "1 kg",  "price": 45,  "mrp": 50,  "image": "images/products/sugar.webp",   "available": true,  "featured": false, "offer": false
+    "id": "ITM-020",
+    "name": "White Matar",
+    "category": "dal-pulses",
+    "weight": "500 g",
+    "price": 42,
+    "mrp": 60,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "OTH003", "name": "Jaggery",    "category": "other", "weight": "500 g", "price": 60,  "mrp": 70,  "image": "images/products/jaggery.webp", "available": true,  "featured": false, "offer": false
+    "id": "ITM-021",
+    "name": "Bura",
+    "category": "other",
+    "weight": "500 g",
+    "price": 46,
+    "mrp": 70,
+    "image": "images/products/sugar.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "OTH004", "name": "Maggi Sauce","category": "other", "weight": "500 g", "price": 85,  "mrp": 95,  "image": "images/products/sauce.webp",   "available": true,  "featured": false, "offer": false
+    "id": "ITM-022",
+    "name": "Singhada Atta",
+    "category": "rice-grains",
+    "weight": "250 g",
+    "price": 45,
+    "mrp": 70,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   },
   {
-    "id": "OTH005", "name": "Mango Pickle","category": "other","weight": "500 g", "price": 95,  "mrp": 110, "image": "images/products/pickle.webp",  "available": true,  "featured": false, "offer": false
+    "id": "ITM-023",
+    "name": "Rajdhani Suji",
+    "category": "rice-grains",
+    "weight": "500 g",
+    "price": 30,
+    "mrp": 50,
+    "image": "images/products/suji.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-024",
+    "name": "Rajdhani Besan",
+    "category": "rice-grains",
+    "weight": "500 g",
+    "price": 55,
+    "mrp": 70,
+    "image": "images/products/besan.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-025",
+    "name": "Samak Rice",
+    "category": "rice-grains",
+    "weight": "250 g",
+    "price": 45,
+    "mrp": 70,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-026",
+    "name": "Jeera",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 42,
+    "mrp": 70,
+    "image": "images/products/cumin.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-027",
+    "name": "Jeera",
+    "category": "spices",
+    "weight": "200 g",
+    "price": 84,
+    "mrp": 140,
+    "image": "images/products/cumin.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-028",
+    "name": "Moti Saunf",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 57,
+    "mrp": 80,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-029",
+    "name": "Barik Saunf",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 56,
+    "mrp": 80,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-030",
+    "name": "Methi Dana",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 20,
+    "mrp": 30,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-031",
+    "name": "Kalonji",
+    "category": "spices",
+    "weight": "50 g",
+    "price": 20,
+    "mrp": 30,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-032",
+    "name": "Rai",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 35,
+    "mrp": 50,
+    "image": "images/products/mustard.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-033",
+    "name": "Peeli Sarso",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 20,
+    "mrp": 30,
+    "image": "images/products/mustard.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-034",
+    "name": "Kali Sarso",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 20,
+    "mrp": 30,
+    "image": "images/products/mustard.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-035",
+    "name": "Ajwain",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 47,
+    "mrp": 60,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-036",
+    "name": "Misri Daana",
+    "category": "other",
+    "weight": "100 g",
+    "price": 15,
+    "mrp": 30,
+    "image": "images/products/sugar.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-037",
+    "name": "Misri Daana",
+    "category": "other",
+    "weight": "200 g",
+    "price": 25,
+    "mrp": 40,
+    "image": "images/products/sugar.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-038",
+    "name": "Dhania Sabut",
+    "category": "spices",
+    "weight": "200 g",
+    "price": 65,
+    "mrp": 80,
+    "image": "images/products/coriander.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-039",
+    "name": "Sabudana",
+    "category": "rice-grains",
+    "weight": "200 g",
+    "price": 27,
+    "mrp": 40,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-040",
+    "name": "Tejpatta",
+    "category": "spices",
+    "weight": "50 g",
+    "price": 20,
+    "mrp": 30,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-041",
+    "name": "Kali Mirch",
+    "category": "spices",
+    "weight": "50 g",
+    "price": 55,
+    "mrp": 80,
+    "image": "images/products/black-pepper.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-042",
+    "name": "Nariyal Powder",
+    "category": "dry-fruits",
+    "weight": "100 g",
+    "price": 51,
+    "mrp": 70,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-043",
+    "name": "Anardana Pisa",
+    "category": "spices",
+    "weight": "50 g",
+    "price": 40,
+    "mrp": 60,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-044",
+    "name": "Hing",
+    "category": "spices",
+    "weight": "20 g",
+    "price": 90,
+    "mrp": 120,
+    "image": "images/products/hing.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-045",
+    "name": "Mungfali Dana",
+    "category": "rice-grains",
+    "weight": "200 g",
+    "price": 49,
+    "mrp": 70,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-046",
+    "name": "Khas Khas",
+    "category": "dry-fruits",
+    "weight": "100 g",
+    "price": 220,
+    "mrp": 300,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-047",
+    "name": "Alsi Seeds",
+    "category": "rice-grains",
+    "weight": "100 g",
+    "price": 20,
+    "mrp": 30,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-048",
+    "name": "Makhana",
+    "category": "dry-fruits",
+    "weight": "100 g",
+    "price": 155,
+    "mrp": 180,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-049",
+    "name": "Makhana",
+    "category": "dry-fruits",
+    "weight": "250 g",
+    "price": 350,
+    "mrp": 500,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-050",
+    "name": "Poha",
+    "category": "rice-grains",
+    "weight": "400 g",
+    "price": 35,
+    "mrp": 50,
+    "image": "images/products/poha.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-051",
+    "name": "Imli",
+    "category": "spices",
+    "weight": "200 g",
+    "price": 30,
+    "mrp": 40,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-052",
+    "name": "Mitha Soda",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 12,
+    "mrp": 20,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-053",
+    "name": "Kala Namak",
+    "category": "other",
+    "weight": "200 g",
+    "price": 12,
+    "mrp": 20,
+    "image": "images/products/salt.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-054",
+    "name": "Sendha Namak",
+    "category": "other",
+    "weight": "200 g",
+    "price": 15,
+    "mrp": 20,
+    "image": "images/products/salt.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-055",
+    "name": "Badi Elaichi",
+    "category": "spices",
+    "weight": "25 g",
+    "price": 70,
+    "mrp": 90,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-056",
+    "name": "Choti Elaichi",
+    "category": "spices",
+    "weight": "10 g",
+    "price": 45,
+    "mrp": 70,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-057",
+    "name": "Choti Elaichi",
+    "category": "spices",
+    "weight": "50 g",
+    "price": 220,
+    "mrp": 300,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-058",
+    "name": "Long (Clove)",
+    "category": "spices",
+    "weight": "10 g",
+    "price": 18,
+    "mrp": 30,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-059",
+    "name": "Dalchini",
+    "category": "spices",
+    "weight": "20 g",
+    "price": 20,
+    "mrp": 30,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-060",
+    "name": "Jaifal",
+    "category": "spices",
+    "weight": "4 pc",
+    "price": 35,
+    "mrp": 50,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-061",
+    "name": "Javitri",
+    "category": "spices",
+    "weight": "10 g",
+    "price": 30,
+    "mrp": 40,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-062",
+    "name": "Lal Mirch Sabut",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 45,
+    "mrp": 60,
+    "image": "images/products/red-chilli.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-063",
+    "name": "Tatri",
+    "category": "spices",
+    "weight": "20 g",
+    "price": 20,
+    "mrp": 30,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-064",
+    "name": "Garam Masala",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 100,
+    "mrp": 150,
+    "image": "images/products/garam-masala.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
+  },
+  {
+    "id": "ITM-065",
+    "name": "Garam Masala Sabut",
+    "category": "spices",
+    "weight": "250 g",
+    "price": 250,
+    "mrp": 350,
+    "image": "images/products/garam-masala.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-066",
+    "name": "Haldi Powder",
+    "category": "spices",
+    "weight": "200 g",
+    "price": 72,
+    "mrp": 90,
+    "image": "images/products/turmeric.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-067",
+    "name": "Amchur Powder",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 50,
+    "mrp": 80,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-068",
+    "name": "Dhania Powder",
+    "category": "spices",
+    "weight": "200 g",
+    "price": 60,
+    "mrp": 80,
+    "image": "images/products/coriander.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
+  },
+  {
+    "id": "ITM-069",
+    "name": "Mirch Kuti",
+    "category": "spices",
+    "weight": "200 g",
+    "price": 85,
+    "mrp": 100,
+    "image": "images/products/red-chilli.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-070",
+    "name": "White Til",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 30,
+    "mrp": 40,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-071",
+    "name": "Kala Til",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 25,
+    "mrp": 40,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-072",
+    "name": "Sunflower Seeds",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 25,
+    "mrp": 40,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-073",
+    "name": "Pumpkin Seeds",
+    "category": "rice-grains",
+    "weight": "100 g",
+    "price": 60,
+    "mrp": 80,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-074",
+    "name": "Breakfast Seeds",
+    "category": "rice-grains",
+    "weight": "500 g",
+    "price": 300,
+    "mrp": 500,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-075",
+    "name": "Badam (Almonds)",
+    "category": "dry-fruits",
+    "weight": "250 g",
+    "price": 250,
+    "mrp": 350,
+    "image": "images/products/almonds.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
+  },
+  {
+    "id": "ITM-076",
+    "name": "Kaju (Cashews)",
+    "category": "dry-fruits",
+    "weight": "250 g",
+    "price": 260,
+    "mrp": 300,
+    "image": "images/products/cashews.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
+  },
+  {
+    "id": "ITM-077",
+    "name": "Akhrot (Walnuts)",
+    "category": "dry-fruits",
+    "weight": "250 g",
+    "price": 400,
+    "mrp": 500,
+    "image": "images/products/walnuts.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-078",
+    "name": "Munakka",
+    "category": "dry-fruits",
+    "weight": "250 g",
+    "price": 240,
+    "mrp": 300,
+    "image": "images/products/raisins.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-079",
+    "name": "Sendha Namak",
+    "category": "other",
+    "weight": "1 kg",
+    "price": 50,
+    "mrp": 80,
+    "image": "images/products/salt.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-080",
+    "name": "Maida",
+    "category": "rice-grains",
+    "weight": "500 g",
+    "price": 30,
+    "mrp": 40,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-081",
+    "name": "Basmati Rice",
+    "category": "rice-grains",
+    "weight": "1 kg",
+    "price": 135,
+    "mrp": 180,
+    "image": "images/products/basmati-rice.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
+  },
+  {
+    "id": "ITM-082",
+    "name": "Basmati Tibar",
+    "category": "rice-grains",
+    "weight": "1 kg",
+    "price": 100,
+    "mrp": 150,
+    "image": "images/products/basmati-rice.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-083",
+    "name": "Basmati Dubar",
+    "category": "rice-grains",
+    "weight": "1 kg",
+    "price": 95,
+    "mrp": 120,
+    "image": "images/products/basmati-rice.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-084",
+    "name": "Basmati Mogra",
+    "category": "rice-grains",
+    "weight": "1 kg",
+    "price": 75,
+    "mrp": 90,
+    "image": "images/products/basmati-rice.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-085",
+    "name": "Kishmish",
+    "category": "dry-fruits",
+    "weight": "250 g",
+    "price": 130,
+    "mrp": 150,
+    "image": "images/products/raisins.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-086",
+    "name": "Kharbooja Magaj",
+    "category": "dry-fruits",
+    "weight": "100 g",
+    "price": 90,
+    "mrp": 140,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-087",
+    "name": "Dhania Sabut",
+    "category": "spices",
+    "weight": "200 g",
+    "price": 54,
+    "mrp": 80,
+    "image": "images/products/coriander.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-088",
+    "name": "Gound Katira",
+    "category": "dry-fruits",
+    "weight": "100 g",
+    "price": 75,
+    "mrp": 100,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-089",
+    "name": "Anjeer",
+    "category": "dry-fruits",
+    "weight": "250 g",
+    "price": 300,
+    "mrp": 500,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-090",
+    "name": "Dalia",
+    "category": "dal-pulses",
+    "weight": "400 g",
+    "price": 25,
+    "mrp": 40,
+    "image": "images/products/dalia.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-091",
+    "name": "Sugar",
+    "category": "other",
+    "weight": "1 kg",
+    "price": 70,
+    "mrp": 90,
+    "image": "images/products/sugar.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-092",
+    "name": "MDH Deggi Mirch",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 110,
+    "mrp": 130,
+    "image": "images/products/red-chilli.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-093",
+    "name": "MDH Kashmiri Mirch",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 115,
+    "mrp": 150,
+    "image": "images/products/red-chilli.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-094",
+    "name": "MDH Chat Masala",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 85,
+    "mrp": 120,
+    "image": "images/products/garam-masala.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-095",
+    "name": "MDH Chana Masala",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 85,
+    "mrp": 120,
+    "image": "images/products/garam-masala.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-096",
+    "name": "MDH Pavbhaji Masala",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 86,
+    "mrp": 120,
+    "image": "images/products/garam-masala.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-097",
+    "name": "MDH Sambhar Masala",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 80,
+    "mrp": 120,
+    "image": "images/products/garam-masala.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-098",
+    "name": "Kishmish Special",
+    "category": "dry-fruits",
+    "weight": "250 g",
+    "price": 170,
+    "mrp": 200,
+    "image": "images/products/raisins.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-099",
+    "name": "MDH Kasuri Methi",
+    "category": "spices",
+    "weight": "100 g",
+    "price": 54,
+    "mrp": 80,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-100",
+    "name": "Kanodia Pili Sarso Oil",
+    "category": "oil-ghee",
+    "weight": "1 L",
+    "price": 220,
+    "mrp": 250,
+    "image": "images/products/mustard-oil.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
+  },
+  {
+    "id": "ITM-101",
+    "name": "Bambino Vermicelli",
+    "category": "rice-grains",
+    "weight": "400 g",
+    "price": 60,
+    "mrp": 80,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-102",
+    "name": "Kuttu Atta",
+    "category": "rice-grains",
+    "weight": "250 g",
+    "price": 35,
+    "mrp": 50,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
+  },
+  {
+    "id": "ITM-103",
+    "name": "Ghee Amul / Mother Dairy",
+    "category": "oil-ghee",
+    "weight": "1 L",
+    "price": 630,
+    "mrp": 720,
+    "image": "images/products/ghee.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
+  },
+  {
+    "id": "ITM-104",
+    "name": "Vedic Atta",
+    "category": "rice-grains",
+    "weight": "5 kg",
+    "price": 325,
+    "mrp": 400,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": true,
+    "offer": true
+  },
+  {
+    "id": "ITM-105",
+    "name": "Vedic Atta",
+    "category": "rice-grains",
+    "weight": "10 kg",
+    "price": 650,
+    "mrp": 800,
+    "image": "images/placeholder.webp",
+    "available": true,
+    "featured": false,
+    "offer": true
   }
 ]

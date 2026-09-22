@@ -758,6 +758,9 @@
       <div class="sidebar-item active" data-view="products">
         <span class="sidebar-icon">📦</span> Products
       </div>
+      <div class="sidebar-item" data-view="sync-settings">
+        <span class="sidebar-icon">☁️</span> GitHub Online Sync
+      </div>
       <div class="sidebar-item" data-view="import-export">
         <span class="sidebar-icon">⬆️</span> Import / Export
       </div>
@@ -774,10 +777,13 @@
     <div class="topbar">
       <div class="topbar-title" id="topbar-title">Products</div>
       <div class="topbar-actions">
+        <button class="btn btn-primary" id="btn-sync-github" style="background:#2563eb;" title="Commit changes directly to GitHub">
+          ☁️ Save & Publish Live
+        </button>
         <button class="btn btn-accent" id="btn-add-product">
           ＋ Add Product
         </button>
-        <button class="btn btn-success" id="btn-download-json" title="Download updated products.json">
+        <button class="btn btn-ghost" id="btn-download-json" title="Download updated products.json">
           ⬇ Download JSON
         </button>
       </div>
@@ -873,6 +879,53 @@
           </div>
         </div>
       </div><!-- /view-products -->
+
+      <!-- ── VIEW: GITHUB SYNC SETTINGS ─────────────── -->
+      <div class="view" id="view-sync-settings">
+        <div class="json-panel" style="margin-bottom:24px;">
+          <div class="json-panel-header">
+            <div>
+              <div class="json-panel-title">☁️ GitHub Online Sync Settings</div>
+              <div style="font-size:12px;color:var(--text-muted);margin-top:2px;">
+                Connect to GitHub once. Any changes you make here will be saved directly to your repository and go live automatically!
+              </div>
+            </div>
+            <span id="github-status-badge" class="badge badge-muted">Not Connected</span>
+          </div>
+          <div style="padding:20px 24px;">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="gh-owner">GitHub Username / Org <span>*</span></label>
+                <input type="text" id="gh-owner" class="form-input" placeholder="e.g. your-github-username" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gh-repo">Repository Name <span>*</span></label>
+                <input type="text" id="gh-repo" class="form-input" placeholder="e.g. Grocery-website" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gh-branch">Branch <span>*</span></label>
+                <input type="text" id="gh-branch" class="form-input" placeholder="master or main" value="master" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gh-path">File Path <span>*</span></label>
+                <input type="text" id="gh-path" class="form-input" value="data/products.json" />
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="gh-token">Personal Access Token (PAT) <span>*</span></label>
+                <input type="password" id="gh-token" class="form-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" autocomplete="off" />
+                <p style="font-size:11px;color:var(--text-muted);margin-top:5px;line-height:1.5;">
+                  🔒 <strong>How to get a token:</strong> Go to <em>GitHub → Settings → Developer Settings → Personal access tokens → Tokens (classic)</em> → Generate new token with <code>repo</code> permissions. Your token is stored only in your local browser storage.
+                </p>
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;margin-top:20px;">
+              <button class="btn btn-accent" id="btn-save-gh-config">💾 Save Connection</button>
+              <button class="btn btn-ghost" id="btn-test-gh-connection">🔄 Test Connection & Fetch Latest</button>
+              <button class="btn btn-danger" id="btn-clear-gh-config">Disconnect</button>
+            </div>
+          </div>
+        </div>
+      </div><!-- /view-sync-settings -->
 
       <!-- ── VIEW: IMPORT / EXPORT ─────────────────── -->
       <div class="view" id="view-import-export">
@@ -1242,6 +1295,200 @@ function importJson() {
 }
 
 /* ══════════════════════════════════════════════════
+   GITHUB REST API INTEGRATION
+═══════════════════════════════════════════════════ */
+const GH_STORAGE_KEY = "radha_rani_gh_sync_cfg";
+let currentFileSha = null;
+
+function getGitHubConfig() {
+  try {
+    const raw = localStorage.getItem(GH_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+function saveGitHubConfig() {
+  const owner = document.getElementById("gh-owner").value.trim();
+  const repo = document.getElementById("gh-repo").value.trim();
+  const branch = document.getElementById("gh-branch").value.trim() || "master";
+  const path = document.getElementById("gh-path").value.trim() || "data/products.json";
+  const token = document.getElementById("gh-token").value.trim();
+
+  if (!owner || !repo || !token) {
+    toast("Owner, Repository name, and Token are required", "danger");
+    return;
+  }
+
+  const config = { owner, repo, branch, path, token };
+  localStorage.setItem(GH_STORAGE_KEY, JSON.stringify(config));
+  updateGitHubStatusUI();
+  toast("GitHub settings saved to browser storage", "success");
+}
+
+function clearGitHubConfig() {
+  localStorage.removeItem(GH_STORAGE_KEY);
+  document.getElementById("gh-owner").value = "";
+  document.getElementById("gh-repo").value = "";
+  document.getElementById("gh-token").value = "";
+  currentFileSha = null;
+  updateGitHubStatusUI();
+  toast("GitHub connection removed", "info");
+}
+
+function loadGitHubConfigForm() {
+  const cfg = getGitHubConfig();
+  if (cfg) {
+    document.getElementById("gh-owner").value = cfg.owner || "";
+    document.getElementById("gh-repo").value = cfg.repo || "";
+    document.getElementById("gh-branch").value = cfg.branch || "master";
+    document.getElementById("gh-path").value = cfg.path || "data/products.json";
+    document.getElementById("gh-token").value = cfg.token || "";
+  }
+  updateGitHubStatusUI();
+}
+
+function updateGitHubStatusUI() {
+  const cfg = getGitHubConfig();
+  const badge = document.getElementById("github-status-badge");
+  const topbarBtn = document.getElementById("btn-sync-github");
+  
+  if (cfg && cfg.token && cfg.owner && cfg.repo) {
+    if (badge) {
+      badge.textContent = `Connected (${cfg.owner}/${cfg.repo})`;
+      badge.className = "badge badge-success";
+    }
+    if (topbarBtn) {
+      topbarBtn.innerHTML = "☁️ Publish Live";
+      topbarBtn.title = `Commit directly to ${cfg.owner}/${cfg.repo}`;
+    }
+  } else {
+    if (badge) {
+      badge.textContent = "Not Connected";
+      badge.className = "badge badge-muted";
+    }
+    if (topbarBtn) {
+      topbarBtn.innerHTML = "☁️ Connect GitHub";
+      topbarBtn.title = "Configure GitHub token to enable online publishing";
+    }
+  }
+}
+
+async function fetchLatestFromGitHub(showToasts = true) {
+  const cfg = getGitHubConfig();
+  if (!cfg || !cfg.token) {
+    if (showToasts) {
+      toast("Please configure and save your GitHub credentials first", "danger");
+      showView("sync-settings");
+    }
+    return false;
+  }
+
+  try {
+    const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${cfg.path}?ref=${cfg.branch}&t=${Date.now()}`;
+    const res = await fetch(url, {
+      headers: {
+        "Authorization": `Bearer ${cfg.token}`,
+        "Accept": "application/vnd.github.v3+json"
+      }
+    });
+
+    if (!res.ok) {
+      const err = await res.json();
+      throw new Error(err.message || "Failed to fetch file");
+    }
+
+    const data = await res.json();
+    currentFileSha = data.sha;
+    
+    // Decode base64 utf-8 content
+    const decoded = decodeURIComponent(escape(atob(data.content.replace(/\s/g, ""))));
+    const parsed = JSON.parse(decoded);
+    if (Array.isArray(parsed)) {
+      products = parsed;
+      renderAll();
+      if (showToasts) toast(`Connected! Loaded ${products.length} products from GitHub repository`, "success");
+      return true;
+    } else {
+      throw new Error("File content is not a valid JSON array");
+    }
+  } catch (err) {
+    console.error("GitHub fetch error:", err);
+    if (showToasts) toast(`GitHub Error: ${err.message}`, "danger");
+    return false;
+  }
+}
+
+async function syncToGitHub() {
+  const cfg = getGitHubConfig();
+  if (!cfg || !cfg.token) {
+    toast("GitHub sync not configured. Please set your credentials.", "warning");
+    showView("sync-settings");
+    return;
+  }
+
+  const syncBtn = document.getElementById("btn-sync-github");
+  const originalText = syncBtn.innerHTML;
+  syncBtn.disabled = true;
+  syncBtn.innerHTML = "⏳ Publishing...";
+
+  try {
+    // 1. Ensure we have the latest SHA to avoid commit conflicts
+    const fileUrl = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${cfg.path}?ref=${cfg.branch}&t=${Date.now()}`;
+    const getRes = await fetch(fileUrl, {
+      headers: {
+        "Authorization": `Bearer ${cfg.token}`,
+        "Accept": "application/vnd.github.v3+json"
+      }
+    });
+
+    if (getRes.ok) {
+      const existing = await getRes.json();
+      currentFileSha = existing.sha;
+    }
+
+    // 2. Encode UTF-8 content to base64
+    const jsonString = JSON.stringify(products, null, 2);
+    const base64Content = btoa(unescape(encodeURIComponent(jsonString)));
+
+    // 3. PUT request to GitHub Contents API
+    const putBody = {
+      message: `Update product catalogue via Admin Panel [${new Date().toLocaleString()}]`,
+      content: base64Content,
+      branch: cfg.branch,
+      ...(currentFileSha ? { sha: currentFileSha } : {})
+    };
+
+    const putRes = await fetch(fileUrl, {
+      method: "PUT",
+      headers: {
+        "Authorization": `Bearer ${cfg.token}`,
+        "Content-Type": "application/json",
+        "Accept": "application/vnd.github.v3+json"
+      },
+      body: JSON.stringify(putBody)
+    });
+
+    if (!putRes.ok) {
+      const err = await putRes.json();
+      throw new Error(err.message || "Failed to commit changes");
+    }
+
+    const resData = await putRes.json();
+    currentFileSha = resData.content.sha;
+    toast("🚀 Changes published live to GitHub repository! Site will update in ~30s.", "success");
+
+  } catch (err) {
+    console.error("GitHub publish error:", err);
+    toast(`Publish failed: ${err.message}`, "danger");
+  } finally {
+    syncBtn.disabled = false;
+    syncBtn.innerHTML = originalText;
+  }
+}
+
+/* ══════════════════════════════════════════════════
    HELPERS
 ═══════════════════════════════════════════════════ */
 function generateNextId() {
@@ -1262,7 +1509,11 @@ function showView(name) {
   document.querySelectorAll(".sidebar-item").forEach(i => {
     i.classList.toggle("active", i.dataset.view === name);
   });
-  const titles = { products: "Products", "import-export": "Import / Export" };
+  const titles = {
+    products: "Products",
+    "sync-settings": "GitHub Online Sync",
+    "import-export": "Import / Export"
+  };
   document.getElementById("topbar-title").textContent = titles[name] || name;
   if (name === "import-export") refreshExportTextarea();
 }
@@ -1284,6 +1535,19 @@ function toast(msg, type = "info") {
 document.querySelectorAll(".sidebar-item").forEach(item => {
   item.addEventListener("click", () => showView(item.dataset.view));
 });
+
+// GitHub Sync buttons
+document.getElementById("btn-sync-github").addEventListener("click", () => {
+  const cfg = getGitHubConfig();
+  if (!cfg || !cfg.token) {
+    showView("sync-settings");
+  } else {
+    syncToGitHub();
+  }
+});
+document.getElementById("btn-save-gh-config").addEventListener("click", saveGitHubConfig);
+document.getElementById("btn-test-gh-connection").addEventListener("click", () => fetchLatestFromGitHub(true));
+document.getElementById("btn-clear-gh-config").addEventListener("click", clearGitHubConfig);
 
 // Add product button
 document.getElementById("btn-add-product").addEventListener("click", openAddModal);
@@ -1357,7 +1621,17 @@ document.addEventListener("keydown", e => {
 /* ══════════════════════════════════════════════════
    INIT
 ═══════════════════════════════════════════════════ */
-loadProducts();
+loadGitHubConfigForm();
+
+// If GitHub is configured, optionally fetch latest from GitHub, else load local JSON
+const savedCfg = getGitHubConfig();
+if (savedCfg && savedCfg.token) {
+  fetchLatestFromGitHub(false).then(success => {
+    if (!success) loadProducts();
+  });
+} else {
+  loadProducts();
+}
 </script>
 </body>
 </html>

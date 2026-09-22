@@ -157,13 +157,18 @@ const Checkout = (() => {
       `;
     }
 
-    // Attach WhatsApp button
-    const waBtn = document.getElementById("btn-order-whatsapp");
-    if (waBtn) {
-      const newBtn = waBtn.cloneNode(true);
-      waBtn.parentNode.replaceChild(newBtn, waBtn);
-      newBtn.addEventListener("click", () => sendToWhatsApp(cartItems, formData));
-    }
+    // Attach WhatsApp buttons
+    [
+      { id: "btn-order-whatsapp",   number: STORE_CONFIG.whatsappNumber  },
+      { id: "btn-order-whatsapp-2", number: STORE_CONFIG.whatsappNumber2 },
+    ].forEach(({ id, number }) => {
+      const waBtn = document.getElementById(id);
+      if (waBtn) {
+        const newBtn = waBtn.cloneNode(true);
+        waBtn.parentNode.replaceChild(newBtn, waBtn);
+        newBtn.addEventListener("click", () => sendToWhatsApp(cartItems, formData, number));
+      }
+    });
   }
 
   // ── WhatsApp Message Builder ───────────────────────────────────────
@@ -198,10 +203,10 @@ ${itemLines}
 _Please confirm my order._`;
   }
 
-  function sendToWhatsApp(cartItems, formData) {
+  function sendToWhatsApp(cartItems, formData, number) {
     const message = buildWhatsAppMessage(cartItems, formData);
     const encoded = encodeURIComponent(message);
-    const url = `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encoded}`;
+    const url = `https://wa.me/${number}?text=${encoded}`;
     window.open(url, "_blank");
     App.showScreen("confirmation");
   }

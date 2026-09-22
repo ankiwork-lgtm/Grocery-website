@@ -7,14 +7,15 @@ const STORE_CONFIG = {
   storeTagline: "Fresh Groceries, Delivered to Your Door",
   storeEmoji: "🪷",
 
-  // ⚠️  Replace with real 10-digit Indian number prefixed with 91
-  whatsappNumber: "919999999999",
+  // ⚠️  Replace with real 10-digit Indian numbers prefixed with 91
+  whatsappNumber: "919250445348",
+  whatsappNumber2: "917011448871",
 
   currency: "₹",
 
-  address: "Main Market, Your Town, Haryana",
+  address: "KH-25, Puri Kohinoor, Sector-89, Faridabad, Haryana",
   openingHours: "9 AM – 9 PM, All Days",
-  phone: "+91 99999 99999",
+  phone: "+91 92504 45348, +91 70114 48871",
 
   deliveryEnabled: true,
   pickupEnabled: true,

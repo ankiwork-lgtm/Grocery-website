@@ -422,7 +422,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
   background: var(--card);
   border-radius: var(--radius);
   border: 1.5px solid var(--border-light);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -447,17 +446,62 @@ h1, h2, h3, h4 { line-height: 1.2; }
   border-radius: var(--radius-pill);
   z-index: 2;
 }
+.discount-burst {
+  position: absolute;
+  bottom: -18px;
+  right: 10px;
+  width: 52px;
+  height: 52px;
+  background: #e53935;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 3px 8px rgba(229, 57, 53, 0.45);
+  clip-path: polygon(
+    50% 0%, 61% 15%, 79% 9%, 79% 28%,
+    98% 35%, 88% 50%, 98% 65%, 79% 72%,
+    79% 91%, 61% 85%, 50% 100%, 39% 85%,
+    21% 91%, 21% 72%, 2% 65%, 12% 50%,
+    2% 35%, 21% 28%, 21% 9%, 39% 15%
+  );
+}
+.discount-burst-pct {
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+.discount-burst-off {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-top: 1px;
+}
 .product-image-wrap {
   width: 100%;
   aspect-ratio: 1;
+  overflow: visible;
+  background: transparent;
+  position: relative;
+}
+.product-image-crop {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background: var(--bg-section);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 .product-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
+  display: block;
 }
 .product-card:hover .product-image { transform: scale(1.04); }
 .product-info {
@@ -572,7 +616,9 @@ h1, h2, h3, h4 { line-height: 1.2; }
 }
 .products-row::-webkit-scrollbar { display: none; }
 .products-row .product-card {
+  width: 160px;
   min-width: 160px;
+  max-width: 160px;
   flex-shrink: 0;
 }
 

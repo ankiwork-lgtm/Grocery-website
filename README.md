@@ -51,7 +51,19 @@ const STORE_CONFIG = {
 
 ---
 
-## 📦 Adding / Editing Products
+## 📦 Managing Products Online (Admin Panel)
+
+You can manage your entire product catalogue directly online through [`admin.html`](admin.html) with GitHub Online Sync:
+
+1. Open `your-domain.github.io/admin.html` (or locally).
+2. Go to **☁️ GitHub Online Sync** in the sidebar.
+3. Enter your **GitHub Username**, **Repository Name**, and a **Personal Access Token (PAT)** (created under *GitHub → Settings → Developer Settings → Tokens (classic)* with `repo` permission).
+4. Add, edit, or delete products and toggle stock status.
+5. Click **☁️ Save & Publish Live** at the top — your changes will be committed directly to GitHub and updated live across the customer site automatically in ~30 seconds without touching code or running Git commands!
+
+---
+
+## 📦 Adding / Editing Products Manually
 
 Edit `data/products.json`. Each product looks like:
 

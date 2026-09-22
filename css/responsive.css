@@ -49,7 +49,7 @@
   .category-name { font-size: 12px; }
 
   .products-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .products-row .product-card { min-width: 180px; }
+  .products-row .product-card { width: 180px; min-width: 180px; max-width: 180px; }
 
   /* Cart */
   .cart-item { margin: 0 32px 12px; }
@@ -103,7 +103,7 @@
 
   /* Grids */
   .products-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .products-row .product-card { min-width: 200px; }
+  .products-row .product-card { width: 200px; min-width: 200px; max-width: 200px; }
   #categories-grid { grid-template-columns: repeat(8, 1fr); gap: 16px; }
 
   /* Product card tweaks */

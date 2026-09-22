@@ -164,12 +164,23 @@ const Products = (() => {
     const inCart = Cart.getItem(product.id);
     const qty = inCart ? inCart.quantity : 0;
 
-    const priceHTML = product.mrp && product.mrp > product.price
+    const hasDiscount = product.mrp && product.mrp > product.price;
+    const discountPct = hasDiscount
+      ? Math.round(((product.mrp - product.price) / product.mrp) * 100)
+      : 0;
+
+    const priceHTML = hasDiscount
       ? `<span class="price">${STORE_CONFIG.currency}${product.price}</span>
          <span class="mrp">${STORE_CONFIG.currency}${product.mrp}</span>`
       : `<span class="price">${STORE_CONFIG.currency}${product.price}</span>`;
 
-    const offerBadge = product.offer ? `<span class="offer-badge">OFFER</span>` : "";
+    const discountBurst = (hasDiscount && discountPct > 0)
+      ? `<div class="discount-burst" aria-label="${discountPct}% off"><span class="discount-burst-pct">${discountPct}%</span><span class="discount-burst-off">OFF</span></div>`
+      : "";
+
+    const offerBadge = product.offer
+      ? `<span class="offer-badge">OFFER</span>`
+      : "";
 
     const actionHTML = product.available
       ? `<button class="btn-add-to-cart" data-id="${product.id}" aria-label="Add ${product.name} to cart"
@@ -187,13 +198,16 @@ const Products = (() => {
       <div class="product-card" data-product-id="${product.id}" id="card-${product.id}">
         ${offerBadge}
         <div class="product-image-wrap">
-          <img
-            src="${product.image}"
-            alt="${product.name}"
-            class="product-image"
-            loading="lazy"
-            onerror="this.src='images/placeholder.webp'"
-          />
+          <div class="product-image-crop">
+            <img
+              src="${product.image}"
+              alt="${product.name}"
+              class="product-image"
+              loading="lazy"
+              onerror="this.src='images/placeholder.webp'"
+            />
+          </div>
+          ${discountBurst}
         </div>
         <div class="product-info">
           <h3 class="product-name">${product.name}</h3>
