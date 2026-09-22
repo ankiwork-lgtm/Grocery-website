@@ -1,0 +1,134 @@
+/* ================================================================
+   Radha Rani Store — Responsive Breakpoints
+   responsive.css
+================================================================ */
+
+/* ── Base: Mobile (320px+) — already handled in style.css ─── */
+
+/* ── Small Mobile adjustments (< 360px) ─────────────────────── */
+@media (max-width: 359px) {
+  .hero h1 { font-size: 22px; }
+  #categories-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .category-icon { font-size: 22px; }
+  .category-name { font-size: 10px; }
+  .products-grid { gap: 8px; }
+  .product-name { font-size: 12px; }
+}
+
+/* ── Tablet (768px+) ─────────────────────────────────────────── */
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+
+  /* Header */
+  .site-header { height: 72px; }
+  .header-logo-name { font-size: 20px; }
+  .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .header-search-wrap { display: block; }
+  .bottom-nav { display: none; }
+
+  /* Hero */
+  .hero { padding: 56px 32px 52px; }
+  .hero h1 { font-size: 36px; }
+  .hero-tagline { font-size: 16px; }
+  .hero-search-wrap input { padding: 16px 20px 16px 52px; font-size: 15px; }
+  .hero-search-wrap { max-width: 560px; }
+
+  /* Sections */
+  .section { padding: 36px 32px; }
+  .section-title { font-size: 22px; }
+  #filter-pills { padding: 20px 32px 0; }
+
+  /* Grids */
+  #categories-grid { grid-template-columns: repeat(8, 1fr); gap: 12px; }
+  .category-card { padding: 16px 8px; }
+  .category-icon { font-size: 32px; }
+  .category-name { font-size: 12px; }
+
+  .products-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .products-row .product-card { min-width: 180px; }
+
+  /* Cart */
+  .cart-item { margin: 0 32px 12px; }
+  .cart-summary { margin: 12px 32px 24px; }
+  .btn-primary { width: calc(100% - 64px); margin: 0 32px; }
+  .btn-whatsapp { width: calc(100% - 64px); margin: 0 32px; }
+
+  /* Checkout & Summary */
+  .checkout-container { padding: 0 32px 40px; max-width: 600px; margin: 0 auto; }
+  .summary-container { padding: 0 32px 40px; max-width: 600px; margin: 0 auto; }
+
+  /* Products screen header */
+  .products-screen-header { padding: 20px 32px 0; }
+  #products-heading { font-size: 22px; }
+
+  /* Footer */
+  .site-footer { margin-bottom: 0; padding: 40px 32px 32px; }
+  .footer-grid { grid-template-columns: repeat(3, 1fr); }
+  .footer-brand { text-align: left; }
+
+  /* Screen title bar */
+  .screen-title-bar { padding: 28px 32px 12px; }
+  .screen-title { font-size: 24px; }
+
+  /* Store info */
+  .store-info-section { padding: 36px 32px; }
+}
+
+/* ── Desktop (1024px+) ───────────────────────────────────────── */
+@media (min-width: 1024px) {
+  .container { padding: 0 32px; }
+
+  /* Header */
+  .site-header { height: 76px; }
+  .header-inner { max-width: 1280px; margin: 0 auto; }
+  .header-nav a { font-size: 15px; }
+  .header-search-wrap input { width: 240px; }
+  .header-search-wrap input:focus { width: 300px; }
+
+  /* Hero */
+  .hero { padding: 72px 32px 68px; }
+  .hero-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .hero-content { max-width: 520px; }
+  .hero h1 { font-size: 44px; }
+  .hero-tagline { font-size: 18px; }
+  .hero-search-wrap { max-width: 100%; }
+
+  /* Sections */
+  .section { padding: 44px 32px; }
+  .section > *, .section > .container { max-width: 1280px; margin-left: auto; margin-right: auto; }
+
+  /* Grids */
+  .products-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .products-row .product-card { min-width: 200px; }
+  #categories-grid { grid-template-columns: repeat(8, 1fr); gap: 16px; }
+
+  /* Product card tweaks */
+  .product-name { font-size: 14px; }
+  .price { font-size: 16px; }
+  .btn-add-to-cart { font-size: 13px; padding: 11px 14px; }
+
+  /* Filter pills */
+  #filter-pills { padding: 24px 32px 0; max-width: 1280px; margin: 0 auto; }
+  .products-screen-header { padding: 24px 32px 0; max-width: 1280px; margin: 0 auto; }
+
+  /* Cart & Checkout */
+  .btn-primary { max-width: 480px; }
+  .btn-whatsapp { max-width: 480px; }
+}
+
+/* ── Wide Desktop (1280px+) ──────────────────────────────────── */
+@media (min-width: 1280px) {
+  .hero h1 { font-size: 50px; }
+  .products-grid { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* ── Focus Styles (Accessibility) ────────────────────────────── */
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+button:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }

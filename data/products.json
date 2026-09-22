@@ -1,0 +1,144 @@
+[
+  {
+    "id": "DAL001", "name": "Moong Dal",      "category": "dal-pulses",  "weight": "1 kg",   "price": 145, "mrp": 160, "image": "images/products/moong-dal.webp",    "available": true,  "featured": true,  "offer": true
+  },
+  {
+    "id": "DAL002", "name": "Masoor Dal",     "category": "dal-pulses",  "weight": "1 kg",   "price": 120, "mrp": 135, "image": "images/products/masoor-dal.webp",   "available": true,  "featured": true,  "offer": false
+  },
+  {
+    "id": "DAL003", "name": "Chana Dal",      "category": "dal-pulses",  "weight": "1 kg",   "price": 110, "mrp": 125, "image": "images/products/chana-dal.webp",    "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "DAL004", "name": "Toor Dal",       "category": "dal-pulses",  "weight": "1 kg",   "price": 155, "mrp": 170, "image": "images/products/toor-dal.webp",     "available": true,  "featured": false, "offer": true
+  },
+  {
+    "id": "DAL005", "name": "Urad Dal",       "category": "dal-pulses",  "weight": "1 kg",   "price": 135, "mrp": 150, "image": "images/products/urad-dal.webp",     "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "DAL006", "name": "Rajma",          "category": "dal-pulses",  "weight": "500 g",  "price": 90,  "mrp": 100, "image": "images/products/rajma.webp",        "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "DAL007", "name": "Kabuli Chana",   "category": "dal-pulses",  "weight": "500 g",  "price": 85,  "mrp": 95,  "image": "images/products/kabuli-chana.webp", "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "DAL008", "name": "Black Chana",    "category": "dal-pulses",  "weight": "1 kg",   "price": 100, "mrp": 115, "image": "images/products/black-chana.webp",  "available": true,  "featured": false, "offer": false
+  },
+
+  {
+    "id": "RIC001", "name": "Basmati Rice",   "category": "rice-grains", "weight": "5 kg",   "price": 450, "mrp": 500, "image": "images/products/basmati-rice.webp", "available": true,  "featured": true,  "offer": true
+  },
+  {
+    "id": "RIC002", "name": "Regular Rice",   "category": "rice-grains", "weight": "5 kg",   "price": 280, "mrp": 300, "image": "images/products/regular-rice.webp", "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "RIC003", "name": "Poha",           "category": "rice-grains", "weight": "500 g",  "price": 50,  "mrp": 60,  "image": "images/products/poha.webp",         "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "RIC004", "name": "Dalia",          "category": "rice-grains", "weight": "500 g",  "price": 55,  "mrp": 65,  "image": "images/products/dalia.webp",        "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "RIC005", "name": "Suji",           "category": "rice-grains", "weight": "1 kg",   "price": 60,  "mrp": 70,  "image": "images/products/suji.webp",         "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "RIC006", "name": "Besan",          "category": "rice-grains", "weight": "1 kg",   "price": 75,  "mrp": 85,  "image": "images/products/besan.webp",        "available": true,  "featured": false, "offer": false
+  },
+
+  {
+    "id": "SPC001", "name": "Turmeric Powder",    "category": "spices", "weight": "200 g",  "price": 55,  "mrp": 65,  "image": "images/products/turmeric.webp",     "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "SPC002", "name": "Red Chilli Powder",  "category": "spices", "weight": "200 g",  "price": 65,  "mrp": 75,  "image": "images/products/red-chilli.webp",   "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "SPC003", "name": "Coriander Powder",   "category": "spices", "weight": "200 g",  "price": 50,  "mrp": 60,  "image": "images/products/coriander.webp",    "available": true,  "featured": true,  "offer": false
+  },
+  {
+    "id": "SPC004", "name": "Garam Masala",       "category": "spices", "weight": "100 g",  "price": 60,  "mrp": 75,  "image": "images/products/garam-masala.webp", "available": true,  "featured": false, "offer": true
+  },
+  {
+    "id": "SPC005", "name": "Cumin Seeds",        "category": "spices", "weight": "100 g",  "price": 45,  "mrp": 55,  "image": "images/products/cumin.webp",        "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "SPC006", "name": "Mustard Seeds",      "category": "spices", "weight": "100 g",  "price": 35,  "mrp": 45,  "image": "images/products/mustard.webp",      "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "SPC007", "name": "Black Pepper",       "category": "spices", "weight": "100 g",  "price": 80,  "mrp": 95,  "image": "images/products/black-pepper.webp", "available": false, "featured": false, "offer": false
+  },
+  {
+    "id": "SPC008", "name": "Hing (Asafoetida)", "category": "spices",  "weight": "50 g",   "price": 70,  "mrp": 80,  "image": "images/products/hing.webp",         "available": true,  "featured": false, "offer": false
+  },
+
+  {
+    "id": "DRF001", "name": "Almonds",      "category": "dry-fruits", "weight": "250 g",  "price": 220, "mrp": 260, "image": "images/products/almonds.webp",    "available": true,  "featured": true,  "offer": true
+  },
+  {
+    "id": "DRF002", "name": "Cashews",      "category": "dry-fruits", "weight": "250 g",  "price": 280, "mrp": 320, "image": "images/products/cashews.webp",    "available": true,  "featured": true,  "offer": false
+  },
+  {
+    "id": "DRF003", "name": "Raisins",      "category": "dry-fruits", "weight": "250 g",  "price": 90,  "mrp": 110, "image": "images/products/raisins.webp",    "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "DRF004", "name": "Walnuts",      "category": "dry-fruits", "weight": "250 g",  "price": 240, "mrp": 280, "image": "images/products/walnuts.webp",    "available": true,  "featured": false, "offer": true
+  },
+  {
+    "id": "DRF005", "name": "Pistachios",   "category": "dry-fruits", "weight": "250 g",  "price": 350, "mrp": 400, "image": "images/products/pistachios.webp", "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "DRF006", "name": "Dates",        "category": "dry-fruits", "weight": "500 g",  "price": 150, "mrp": 180, "image": "images/products/dates.webp",      "available": true,  "featured": false, "offer": false
+  },
+
+  {
+    "id": "OIL001", "name": "Mustard Oil",    "category": "oil-ghee", "weight": "1 L",    "price": 170, "mrp": 190, "image": "images/products/mustard-oil.webp",    "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "OIL002", "name": "Sunflower Oil",  "category": "oil-ghee", "weight": "1 L",    "price": 155, "mrp": 175, "image": "images/products/sunflower-oil.webp",  "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "OIL003", "name": "Refined Oil",    "category": "oil-ghee", "weight": "1 L",    "price": 145, "mrp": 165, "image": "images/products/refined-oil.webp",    "available": true,  "featured": false, "offer": true
+  },
+  {
+    "id": "OIL004", "name": "Pure Ghee",      "category": "oil-ghee", "weight": "500 ml", "price": 320, "mrp": 360, "image": "images/products/ghee.webp",           "available": true,  "featured": true,  "offer": false
+  },
+
+  {
+    "id": "SNK001", "name": "Parle-G Biscuits", "category": "snacks", "weight": "800 g",  "price": 80,  "mrp": 90,  "image": "images/products/parle-g.webp",   "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "SNK002", "name": "Aloo Bhujia",      "category": "snacks", "weight": "400 g",  "price": 90,  "mrp": 100, "image": "images/products/aloo-bhujia.webp","available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "SNK003", "name": "Lay's Chips",       "category": "snacks", "weight": "26 g",   "price": 20,  "mrp": 20,  "image": "images/products/lays.webp",      "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "SNK004", "name": "Namkeen Mix",       "category": "snacks", "weight": "200 g",  "price": 50,  "mrp": 60,  "image": "images/products/namkeen.webp",   "available": true,  "featured": false, "offer": false
+  },
+
+  {
+    "id": "BEV001", "name": "Tata Tea Gold",   "category": "beverages", "weight": "500 g",  "price": 240, "mrp": 265, "image": "images/products/tata-tea.webp",    "available": true,  "featured": true,  "offer": true
+  },
+  {
+    "id": "BEV002", "name": "Bru Coffee",      "category": "beverages", "weight": "200 g",  "price": 180, "mrp": 200, "image": "images/products/bru-coffee.webp",  "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "BEV003", "name": "Horlicks",        "category": "beverages", "weight": "500 g",  "price": 290, "mrp": 330, "image": "images/products/horlicks.webp",    "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "BEV004", "name": "Real Fruit Juice", "category": "beverages","weight": "1 L",    "price": 100, "mrp": 115, "image": "images/products/real-juice.webp",  "available": true,  "featured": false, "offer": false
+  },
+
+  {
+    "id": "OTH001", "name": "Tata Salt",  "category": "other", "weight": "1 kg",  "price": 28,  "mrp": 30,  "image": "images/products/salt.webp",    "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "OTH002", "name": "Sugar",      "category": "other", "weight": "1 kg",  "price": 45,  "mrp": 50,  "image": "images/products/sugar.webp",   "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "OTH003", "name": "Jaggery",    "category": "other", "weight": "500 g", "price": 60,  "mrp": 70,  "image": "images/products/jaggery.webp", "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "OTH004", "name": "Maggi Sauce","category": "other", "weight": "500 g", "price": 85,  "mrp": 95,  "image": "images/products/sauce.webp",   "available": true,  "featured": false, "offer": false
+  },
+  {
+    "id": "OTH005", "name": "Mango Pickle","category": "other","weight": "500 g", "price": 95,  "mrp": 110, "image": "images/products/pickle.webp",  "available": true,  "featured": false, "offer": false
+  }
+]

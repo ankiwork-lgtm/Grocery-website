@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Radha Rani Store | Fresh Grocery Store — Shop Online</title>
+  <meta name="description" content="Shop fresh groceries, pulses, spices, dry fruits, oils and daily essentials from Radha Rani Store. Order via WhatsApp with doorstep delivery." />
+  <meta name="keywords" content="grocery store, dal, rice, spices, dry fruits, online grocery, WhatsApp order, Radha Rani Store" />
+  <meta name="theme-color" content="#7a1f1f" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Radha Rani Store | Fresh Groceries" />
+  <meta property="og:description" content="Order fresh groceries online via WhatsApp. Dal, Rice, Spices, Dry Fruits and more." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       APP LOADER
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="app-loader" aria-live="polite" aria-label="Loading store...">
+    <div class="loader-spinner"></div>
+    <p>Loading Radha Rani Store…</p>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       ERROR BANNER
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="load-error-banner" role="alert">
+    <span>⚠️</span>
+    <span>We're unable to load products right now. Please refresh the page and try again.</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HEADER
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <div class="header-logo" data-nav="home" role="button" tabindex="0" aria-label="Radha Rani Store — Go to home">
+        <span class="header-logo-icon" aria-hidden="true">🪷</span>
+        <div class="header-logo-text">
+          <span class="header-logo-name">Radha Rani Store</span>
+          <span class="header-logo-tagline">Fresh Groceries</span>
+        </div>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="header-nav" aria-label="Main navigation">
+        <a href="#" data-nav="home"     id="nav-home">Home</a>
+        <a href="#" data-nav="products" id="nav-categories">Categories</a>
+        <a href="#" data-action="offers" id="nav-offers">Offers</a>
+        <a href="#" data-nav="contact"  id="nav-contact">Contact</a>
+      </nav>
+
+      <!-- Right: Search + Cart + Hamburger -->
+      <div class="header-right">
+        <div class="header-search-wrap" aria-label="Search products">
+          <span class="header-search-icon" aria-hidden="true">🔍</span>
+          <input
+            type="search"
+            id="header-search-input"
+            placeholder="Search products…"
+            aria-label="Search products"
+            autocomplete="off"
+          />
+        </div>
+
+        <button class="btn-cart-header" data-action="cart" id="header-cart-btn" aria-label="Open cart">
+          <span class="cart-icon" aria-hidden="true">🛒</span>
+          <span class="cart-badge" aria-label="Items in cart" id="header-cart-badge">0</span>
+          <span>Cart</span>
+        </button>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile navigation menu" aria-hidden="true">
+      <a href="#" data-nav="home"    class="mobile-nav-link" id="mnav-home">🏠 Home</a>
+      <a href="#" data-nav="products" class="mobile-nav-link" id="mnav-categories">📂 Categories</a>
+      <a href="#" data-action="offers" class="mobile-nav-link" id="mnav-offers">🏷️ Offers</a>
+      <a href="#" data-nav="contact" class="mobile-nav-link" id="mnav-contact">☎️ Contact</a>
+      <a href="#" data-action="cart" class="mobile-nav-link" id="mnav-cart">🛒 Cart</a>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════════════════ -->
+  <main id="main-content" role="main">
+
+    <!-- ────────────────────────────────────────────────────────
+         SCREEN: HOME
+    ──────────────────────────────────────────────────────── -->
+    <section id="screen-home" class="screen" aria-label="Home">
+
+      <!-- Hero -->
+      <div class="hero">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <span class="hero-label">🛒 Order via WhatsApp</span>
+            <h1>Radha Rani Store</h1>
+            <p class="hero-tagline">Fresh Groceries, Delivered to Your Door</p>
+            <div class="hero-search-wrap">
+              <span class="hero-search-icon" aria-hidden="true">🔍</span>
+              <input
+                type="search"
+                id="search-input"
+                placeholder="Search dal, rice, spices…"
+                aria-label="Search grocery products"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories -->
+      <section class="section" aria-labelledby="categories-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="categories-heading">Shop by Category</h2>
+          <span class="section-link" data-action="browse" role="button" tabindex="0">See All →</span>
+        </div>
+        <div id="categories-grid" role="list" aria-label="Product categories"></div>
+      </section>
+
+      <!-- Popular Products -->
+      <section class="section" aria-labelledby="featured-heading" style="background: var(--bg-section); padding-top: 28px;">
+        <div class="section-header">
+          <h2 class="section-title" id="featured-heading">Popular Products</h2>
+          <span class="section-link" data-action="browse" role="button" tabindex="0">View All →</span>
+        </div>
+        <div id="featured-products" class="products-row" aria-label="Popular products"></div>
+      </section>
+
+      <!-- Today's Offers -->
+      <section class="section" aria-labelledby="offers-heading">
+        <div class="section-header">
+          <h2 class="section-title" id="offers-heading">Today's Offers</h2>
+          <span class="section-link" data-action="offers" role="button" tabindex="0">View All →</span>
+        </div>
+        <div id="offers-products" class="products-row" aria-label="Today's offers"></div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="site-footer" role="contentinfo">
+        <div class="footer-brand">
+          <p class="footer-brand-name">🪷 Radha Rani Store</p>
+          <p class="footer-brand-tagline">Your Local Grocery Store</p>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <p class="footer-col-title">Quick Links</p>
+            <ul>
+              <li><a data-nav="home"     role="button" tabindex="0">Home</a></li>
+              <li><a data-nav="products" role="button" tabindex="0">Categories</a></li>
+              <li><a data-action="offers" role="button" tabindex="0">Offers</a></li>
+              <li><a data-action="cart"  role="button" tabindex="0">Cart</a></li>
+              <li><a data-nav="contact"  role="button" tabindex="0">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="footer-col-title">Contact</p>
+            <p>📍 <span id="footer-address">Main Market, Your Town, Haryana</span></p>
+            <p>📞 <span id="footer-phone">+91 99999 99999</span></p>
+            <p>🕒 <span id="footer-hours">9 AM – 9 PM, All Days</span></p>
+          </div>
+        </div>
+        <p class="footer-bottom">
+          © 2026 Radha Rani Store. All rights reserved.
+          <a href="admin.html" class="footer-admin-link" title="Admin Panel">⚙️</a>
+        </p>
+      </footer>
+
+    </section><!-- /screen-home -->
+
+    <!-- ────────────────────────────────────────────────────────
+         SCREEN: PRODUCTS
+    ──────────────────────────────────────────────────────── -->
+    <section id="screen-products" class="screen" aria-label="Product catalogue">
+
+      <!-- Filter Pills -->
+      <div id="filter-pills" role="list" aria-label="Filter by category"></div>
+
+      <!-- Products Heading + Grid -->
+      <div class="products-screen-header">
+        <h2 id="products-heading">All Products</h2>
+      </div>
+
+      <div class="section" style="padding-top: 16px;">
+        <div id="product-grid" class="products-grid" role="list" aria-label="Products"></div>
+      </div>
+
+    </section><!-- /screen-products -->
+
+    <!-- ────────────────────────────────────────────────────────
+         SCREEN: CART
+    ──────────────────────────────────────────────────────── -->
+    <section id="screen-cart" class="screen" aria-label="Shopping cart">
+
+      <div class="screen-title-bar">
+        <button class="btn-back" id="btn-cart-back" data-nav="home" aria-label="Go back">← Back</button>
+        <span aria-hidden="true">🛒</span>
+        <h2 class="screen-title">Your Cart</h2>
+      </div>
+
+      <!-- Empty State -->
+      <div id="cart-empty-state" class="empty-state" style="display:none;" aria-live="polite">
+        <div class="empty-state-icon">🛒</div>
+        <p class="empty-state-title">Your cart is empty</p>
+        <p class="empty-state-subtitle">Add some groceries to get started!</p>
+        <button class="btn-secondary" data-action="browse" style="margin-top:8px;" id="btn-cart-browse">
+          Shop Products
+        </button>
+      </div>
+
+      <!-- Cart Content -->
+      <div id="cart-content" style="display:none;">
+        <div id="cart-items-container" aria-live="polite" aria-label="Cart items"></div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary" aria-label="Order total">
+          <div class="cart-summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">₹0</span>
+          </div>
+          <div class="cart-summary-row">
+            <span>Delivery</span>
+            <span>To be confirmed</span>
+          </div>
+          <div class="cart-summary-row total">
+            <span>Total</span>
+            <span id="cart-total">₹0</span>
+          </div>
+        </div>
+
+        <div class="cart-actions-row">
+          <button class="btn-clear-cart" id="btn-clear-cart" aria-label="Clear all items from cart">
+            🗑 Clear Cart
+          </button>
+          <button class="btn-primary" id="btn-proceed-checkout" aria-label="Proceed to checkout">
+            Proceed to Order →
+          </button>
+        </div>
+      </div>
+
+    </section><!-- /screen-cart -->
+
+    <!-- ────────────────────────────────────────────────────────
+         SCREEN: CHECKOUT
+    ──────────────────────────────────────────────────────── -->
+    <section id="screen-checkout" class="screen" aria-label="Checkout">
+
+      <div class="screen-title-bar">
+        <button class="btn-back" id="btn-checkout-back" data-nav="cart" aria-label="Go back to cart">← Back</button>
+        <span aria-hidden="true">📋</span>
+        <h2 class="screen-title">Order Details</h2>
+      </div>
+
+      <div class="checkout-container">
+
+        <!-- Mini Order Summary -->
+        <div class="mini-summary" id="checkout-mini-summary" aria-label="Order summary"></div>
+
+        <!-- Customer Form -->
+        <form id="checkout-form" novalidate aria-label="Customer details form">
+
+          <!-- Name -->
+          <div class="form-group">
+            <label class="form-label" for="customer-name">Full Name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="customer-name"
+              class="form-input"
+              placeholder="Enter your name"
+              autocomplete="name"
+              aria-required="true"
+              aria-describedby="name-error"
+            />
+            <p class="field-error" id="name-error" role="alert"></p>
+          </div>
+
+          <!-- Mobile -->
+          <div class="form-group">
+            <label class="form-label" for="customer-mobile">Mobile Number <span aria-hidden="true">*</span></label>
+            <input
+              type="tel"
+              id="customer-mobile"
+              class="form-input"
+              placeholder="10-digit mobile number"
+              autocomplete="tel"
+              maxlength="10"
+              inputmode="numeric"
+              pattern="[6-9][0-9]{9}"
+              aria-required="true"
+              aria-describedby="mobile-error"
+            />
+            <p class="field-error" id="mobile-error" role="alert"></p>
+          </div>
+
+          <!-- Delivery Option -->
+          <div class="form-group">
+            <p class="form-label" id="delivery-label">Delivery Option <span aria-hidden="true">*</span></p>
+            <div class="radio-group" role="radiogroup" aria-labelledby="delivery-label" aria-describedby="delivery-error">
+              <label class="radio-option" for="delivery-home">
+                <input type="radio" id="delivery-home" name="delivery-option" value="home" />
+                <span class="radio-label"><span aria-hidden="true">🏠</span> Home Delivery</span>
+              </label>
+              <label class="radio-option" for="delivery-pickup">
+                <input type="radio" id="delivery-pickup" name="delivery-option" value="pickup" />
+                <span class="radio-label"><span aria-hidden="true">🏪</span> Store Pickup</span>
+              </label>
+            </div>
+            <p class="field-error" id="delivery-error" role="alert"></p>
+          </div>
+
+          <!-- Address (shown for home delivery) -->
+          <div class="form-group" id="address-group" style="display:none;">
+            <label class="form-label" for="customer-address">Delivery Address <span aria-hidden="true">*</span></label>
+            <textarea
+              id="customer-address"
+              class="form-input"
+              placeholder="House no., street, locality, city…"
+              rows="3"
+              autocomplete="street-address"
+              aria-describedby="address-error"
+            ></textarea>
+            <p class="field-error" id="address-error" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn-primary" id="btn-review-order" style="margin:0; width:100%;">
+            Review Order →
+          </button>
+
+        </form>
+      </div>
+
+    </section><!-- /screen-checkout -->
+
+    <!-- ────────────────────────────────────────────────────────
+         SCREEN: ORDER SUMMARY
+    ──────────────────────────────────────────────────────── -->
+    <section id="screen-summary" class="screen" aria-label="Order summary review">
+
+      <div class="screen-title-bar">
+        <button class="btn-back" id="btn-summary-back" data-nav="checkout" aria-label="Go back to checkout">← Back</button>
+        <span aria-hidden="true">📄</span>
+        <h2 class="screen-title">Order Summary</h2>
+      </div>
+
+      <div class="summary-container">
+
+        <!-- Items -->
+        <div class="summary-card" aria-label="Items in your order">
+          <p class="summary-card-title">Items</p>
+          <div id="order-summary-items"></div>
+          <div class="summary-total-row">
+            <span>Total</span>
+            <span id="order-summary-total">₹0</span>
+          </div>
+        </div>
+
+        <!-- Customer Details -->
+        <div class="summary-card" aria-label="Delivery details">
+          <p class="summary-card-title">Delivery Details</p>
+          <div id="order-summary-customer"></div>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <button class="btn-whatsapp" id="btn-order-whatsapp" aria-label="Place order on WhatsApp">
+          <span class="btn-whatsapp-icon" aria-hidden="true">💬</span>
+          Order via WhatsApp
+        </button>
+
+        <p style="text-align:center; color:var(--text-muted); font-size:12px; margin-top:12px;">
+          WhatsApp will open with your order pre-filled. Just press Send!
+        </p>
+
+      </div>
+
+    </section><!-- /screen-summary -->
+
+    <!-- ────────────────────────────────────────────────────────
+         SCREEN: ORDER CONFIRMATION
+    ──────────────────────────────────────────────────────── -->
+    <section id="screen-confirmation" class="screen" aria-label="Order placed">
+
+      <div class="confirmation-container">
+        <div class="confirmation-icon" aria-hidden="true">✅</div>
+        <h2 class="confirmation-title">Order Sent!</h2>
+        <p class="confirmation-subtitle">
+          Your order has been sent to Radha Rani Store via WhatsApp. The store will confirm it shortly.
+        </p>
+
+        <div class="confirmation-steps" aria-label="Next steps">
+          <div class="confirmation-step">
+            <span class="confirmation-step-num">1</span>
+            <span>Press <strong>Send</strong> in WhatsApp if you haven't already</span>
+          </div>
+          <div class="confirmation-step">
+            <span class="confirmation-step-num">2</span>
+            <span>Wait for the store to confirm your order</span>
+          </div>
+          <div class="confirmation-step">
+            <span class="confirmation-step-num">3</span>
+            <span>Keep your phone ready for delivery updates</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" data-action="home" id="btn-continue-shopping" style="margin-top:24px;">
+          Continue Shopping
+        </button>
+      </div>
+
+    </section><!-- /screen-confirmation -->
+
+    <!-- ────────────────────────────────────────────────────────
+         SCREEN: CONTACT
+    ──────────────────────────────────────────────────────── -->
+    <section id="screen-contact" class="screen" aria-label="Store contact and information">
+
+      <div class="screen-title-bar">
+        <span aria-hidden="true">📍</span>
+        <h2 class="screen-title">Store Information</h2>
+      </div>
+
+      <section class="store-info-section" aria-labelledby="store-info-heading">
+        <div class="store-info-card">
+          <div class="store-info-header">
+            <p class="store-info-name">🪷 Radha Rani Store</p>
+            <p class="store-info-sub">Your Local Grocery Store</p>
+          </div>
+          <div class="store-info-body">
+            <div class="store-info-item">
+              <span class="store-info-icon">📍</span>
+              <div>
+                <strong>Address</strong><br>
+                <span id="contact-address">Main Market, Your Town, Haryana</span>
+              </div>
+            </div>
+            <div class="store-info-item">
+              <span class="store-info-icon">📞</span>
+              <div>
+                <strong>WhatsApp / Phone</strong><br>
+                <span id="contact-phone">+91 99999 99999</span>
+              </div>
+            </div>
+            <div class="store-info-item">
+              <span class="store-info-icon">🕒</span>
+              <div>
+                <strong>Opening Hours</strong><br>
+                <span id="contact-hours">9 AM – 9 PM, All Days</span>
+              </div>
+            </div>
+            <div class="store-info-item">
+              <span class="store-info-icon">🚚</span>
+              <div>
+                <strong>Delivery</strong><br>
+                Home delivery &amp; store pickup available
+              </div>
+            </div>
+            <div class="store-info-item">
+              <span class="store-info-icon">💬</span>
+              <div>
+                <strong>Order via WhatsApp</strong><br>
+                <a id="contact-whatsapp-link" href="#" class="whatsapp-contact-link" target="_blank" rel="noopener">
+                  Chat on WhatsApp →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top: 24px;">
+          <button class="btn-primary" data-action="browse" id="btn-contact-shop" style="display:inline-flex; width:auto; padding: 14px 32px;">
+            🛒 Start Shopping
+          </button>
+        </div>
+      </section>
+
+    </section><!-- /screen-contact -->
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       BOTTOM NAVIGATION (Mobile)
+  ═══════════════════════════════════════════════════════════ -->
+  <nav class="bottom-nav" role="navigation" aria-label="Mobile navigation">
+    <button class="bottom-nav-btn active" data-screen="home" id="bottom-nav-home" aria-label="Home">
+      <span class="bottom-nav-icon" aria-hidden="true">🏠</span>
+      <span class="bottom-nav-label">Home</span>
+    </button>
+    <button class="bottom-nav-btn" data-screen="products" id="bottom-nav-products" aria-label="Browse categories">
+      <span class="bottom-nav-icon" aria-hidden="true">📂</span>
+      <span class="bottom-nav-label">Shop</span>
+    </button>
+    <button class="bottom-nav-btn" data-screen="cart" id="bottom-nav-cart" aria-label="Shopping cart">
+      <span class="bottom-nav-icon" aria-hidden="true">
+        🛒
+        <span class="cart-badge" aria-label="Cart items" id="bottom-cart-badge">0</span>
+      </span>
+      <span class="bottom-nav-label">Cart</span>
+    </button>
+    <button class="bottom-nav-btn" data-screen="contact" id="bottom-nav-contact" aria-label="Store contact">
+      <span class="bottom-nav-icon" aria-hidden="true">☎️</span>
+      <span class="bottom-nav-label">Contact</span>
+    </button>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SCRIPTS (order matters)
+  ═══════════════════════════════════════════════════════════ -->
+  <script src="js/config.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

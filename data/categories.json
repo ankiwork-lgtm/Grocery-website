@@ -1,0 +1,50 @@
+[
+  {
+    "id": "dal-pulses",
+    "name": "Dal & Pulses",
+    "icon": "🫘",
+    "image": "images/categories/dal.webp"
+  },
+  {
+    "id": "rice-grains",
+    "name": "Rice & Grains",
+    "icon": "🌾",
+    "image": "images/categories/rice.webp"
+  },
+  {
+    "id": "spices",
+    "name": "Spices",
+    "icon": "🌶️",
+    "image": "images/categories/spices.webp"
+  },
+  {
+    "id": "dry-fruits",
+    "name": "Dry Fruits & Nuts",
+    "icon": "🥜",
+    "image": "images/categories/dry-fruits.webp"
+  },
+  {
+    "id": "oil-ghee",
+    "name": "Oil & Ghee",
+    "icon": "🫙",
+    "image": "images/categories/oil.webp"
+  },
+  {
+    "id": "snacks",
+    "name": "Biscuits & Snacks",
+    "icon": "🍪",
+    "image": "images/categories/snacks.webp"
+  },
+  {
+    "id": "beverages",
+    "name": "Tea & Beverages",
+    "icon": "☕",
+    "image": "images/categories/beverages.webp"
+  },
+  {
+    "id": "other",
+    "name": "Other Grocery",
+    "icon": "🛒",
+    "image": "images/categories/other.webp"
+  }
+]
