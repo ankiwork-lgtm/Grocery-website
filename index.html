@@ -8,7 +8,7 @@
   <title>Radha Rani Store | Fresh Grocery Store — Shop Online</title>
   <meta name="description" content="Shop fresh groceries, pulses, spices, dry fruits, oils and daily essentials from Radha Rani Store. Order via WhatsApp with doorstep delivery." />
   <meta name="keywords" content="grocery store, dal, rice, spices, dry fruits, online grocery, WhatsApp order, Radha Rani Store" />
-  <meta name="theme-color" content="#7a1f1f" />
+  <meta name="theme-color" content="#FBFBF9" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Radha Rani Store | Fresh Groceries" />
@@ -18,7 +18,7 @@
   <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
@@ -59,23 +59,12 @@
       <nav class="header-nav" aria-label="Main navigation">
         <a href="#" data-nav="home"     id="nav-home">Home</a>
         <a href="#" data-nav="products" id="nav-categories">Categories</a>
-        <a href="#" data-action="offers" id="nav-offers">Offers</a>
+        <a href="#" data-action="offers" id="nav-offers">Offers <span class="nav-offers-badge" aria-label="Hot deals">HOT</span></a>
         <a href="#" data-nav="contact"  id="nav-contact">Contact</a>
       </nav>
 
-      <!-- Right: Search + Cart + Hamburger -->
+      <!-- Right: Cart + Hamburger (search removed — lives in hero) -->
       <div class="header-right">
-        <div class="header-search-wrap" aria-label="Search products">
-          <span class="header-search-icon" aria-hidden="true">🔍</span>
-          <input
-            type="search"
-            id="header-search-input"
-            placeholder="Search products…"
-            aria-label="Search products"
-            autocomplete="off"
-          />
-        </div>
-
         <button class="btn-cart-header" data-action="cart" id="header-cart-btn" aria-label="Open cart">
           <span class="cart-icon" aria-hidden="true">🛒</span>
           <span class="cart-badge" aria-label="Items in cart" id="header-cart-badge">0</span>
@@ -111,24 +100,120 @@
     ──────────────────────────────────────────────────────── -->
     <section id="screen-home" class="screen" aria-label="Home">
 
-      <!-- Hero -->
+      <!-- ── Hero ──────────────────────────────────────────────────── -->
       <div class="hero">
         <div class="hero-inner">
+
+          <!-- Left column: text & actions -->
           <div class="hero-content">
-            <span class="hero-label">🛒 Order via WhatsApp</span>
+
+            <!-- WhatsApp Pill Button -->
+            <button class="hero-whatsapp-btn" data-action="whatsapp" aria-label="Order via WhatsApp">
+              <span class="hero-whatsapp-icon" aria-hidden="true">💬</span>
+              Order via WhatsApp
+            </button>
+
+            <!-- Main Headline -->
             <h1>Radha Rani Store</h1>
             <p class="hero-tagline">Fresh Groceries, Delivered to Your Door</p>
+            <!-- TODO: replace with real stats before launch -->
+            <div class="hero-stats">
+              <span>500+ Happy Families</span>
+              <span class="hero-stats-dot">•</span>
+              <span>⭐ 4.8 Rated</span>
+            </div>
+
+            <!-- Hero Search Bar -->
             <div class="hero-search-wrap">
               <span class="hero-search-icon" aria-hidden="true">🔍</span>
               <input
                 type="search"
                 id="search-input"
-                placeholder="Search dal, rice, spices…"
+                placeholder="Search dal, rice, spices, atta…"
                 aria-label="Search grocery products"
                 autocomplete="off"
               />
             </div>
-          </div>
+
+            <!-- Primary CTA -->
+            <button class="hero-cta-btn" data-action="browse" aria-label="Shop daily deals">
+              🛍️ Shop Daily Deals
+            </button>
+
+            <!-- Trust / Delivery strip -->
+            <div class="hero-trust-strip" aria-label="Store highlights">
+              <span class="hero-trust-tag">⚡ Fast Doorstep Delivery</span>
+              <span class="hero-trust-tag">🥬 100% Fresh &amp; Authentic</span>
+            </div>
+
+          </div><!-- /hero-content -->
+
+          <!-- Right column: visual (hidden on mobile, visible on desktop) -->
+          <div class="hero-visual" aria-hidden="true">
+
+            <!-- Emoji + float cards confined to this stage so cards don't overlap bubbles -->
+            <div class="hero-visual-stage">
+              <div class="hero-visual-emoji">🧺</div>
+              <div class="hero-float-card hero-float-card--quality">
+                <span class="float-icon">✅</span>
+                <div>
+                  <div>100% Quality</div>
+                  <div class="hero-float-card-sub">Guaranteed Fresh</div>
+                </div>
+              </div>
+              <div class="hero-float-card hero-float-card--price">
+                <span class="float-icon">🏷️</span>
+                <div>
+                  <div>Best Prices</div>
+                  <div class="hero-float-card-sub">Daily Deals</div>
+                </div>
+              </div>
+            </div><!-- /hero-visual-stage -->
+
+            <!-- Feature bubbles -->
+            <div class="hero-bubbles">
+              <span class="hero-bubble hero-bubble--brand">🚚 Free Home Delivery</span>
+              <span class="hero-bubble hero-bubble--accent">🌾 Unpolished Daal</span>
+              <span class="hero-bubble hero-bubble--brand">🌶️ Pure Spices</span>
+              <span class="hero-bubble hero-bubble--accent">🥜 Premium Dry Fruits</span>
+              <span class="hero-bubble hero-bubble--brand">🧂 No Preservatives</span>
+              <span class="hero-bubble hero-bubble--accent">⚖️ Fair Prices</span>
+              <span class="hero-bubble hero-bubble--brand">🏡 Trusted by Families</span>
+            </div>
+
+          </div><!-- /hero-visual -->
+
+        </div><!-- /hero-inner -->
+      </div><!-- /hero -->
+
+      <!-- ── Product Marquee Strip ────────────────────────────── -->
+      <div class="product-marquee" aria-label="Products available at Radha Rani Store" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-item"><span class="marquee-dot">✦</span> अनपोलिस दाल <span class="marquee-en">Dal</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> चावल <span class="marquee-en">Rice</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> साबुत मसाले <span class="marquee-en">Whole Spices</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> पिसे मसाले <span class="marquee-en">Ground Spices</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> ड्राई फ्रूट <span class="marquee-en">Dry Fruits</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> मैंदा <span class="marquee-en">Maida</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> सूजी <span class="marquee-en">Suji</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> बेसन <span class="marquee-en">Besan</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> MDH मसाले <span class="marquee-en">MDH Spices</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> चीनी <span class="marquee-en">Sugar</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> देसी खांड <span class="marquee-en">Desi Khand</span></span>
+        </div>
+        <!-- Duplicate track for seamless infinite loop -->
+        <div class="marquee-track" aria-hidden="true">
+          <span class="marquee-item"><span class="marquee-dot">✦</span> अनपोलिस दाल <span class="marquee-en">Dal</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> चावल <span class="marquee-en">Rice</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> साबुत मसाले <span class="marquee-en">Whole Spices</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> पिसे मसाले <span class="marquee-en">Ground Spices</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> ड्राई फ्रूट <span class="marquee-en">Dry Fruits</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> मैंदा <span class="marquee-en">Maida</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> सूजी <span class="marquee-en">Suji</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> बेसन <span class="marquee-en">Besan</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> MDH मसाले <span class="marquee-en">MDH Spices</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> चीनी <span class="marquee-en">Sugar</span></span>
+          <span class="marquee-item"><span class="marquee-dot">✦</span> देसी खांड <span class="marquee-en">Desi Khand</span></span>
         </div>
       </div>
 
@@ -158,6 +243,57 @@
         </div>
         <div id="offers-products" class="products-row" aria-label="Today's offers"></div>
       </section>
+
+      <!-- ── What We Offer ────────────────────────────────────── -->
+      <section class="section wwo-section" aria-labelledby="wwo-heading">
+        <div class="section-header wwo-header">
+          <div>
+            <h2 class="section-title" id="wwo-heading">राधा रानी स्टोर पर क्या-क्या मिलता है?</h2>
+            <p class="wwo-subtitle">What We Offer</p>
+          </div>
+        </div>
+        <div class="wwo-grid">
+          <div class="wwo-card">
+            <div class="wwo-card-icon">🌾</div>
+            <div class="wwo-card-label">पॉलिश फ्री दालें</div>
+            <div class="wwo-card-sub">Polish-free Top Quality Dals<br><span class="wwo-card-note">सेहत से कोई समझौता नहीं</span></div>
+          </div>
+          <div class="wwo-card">
+            <div class="wwo-card-icon">🍚</div>
+            <div class="wwo-card-label">बासमती चावल</div>
+            <div class="wwo-card-sub">Premium Basmati Rice</div>
+          </div>
+          <div class="wwo-card">
+            <div class="wwo-card-icon">🌶️</div>
+            <div class="wwo-card-label">घरेलू मसाले</div>
+            <div class="wwo-card-sub">Pure Whole &amp; Ground Home Spices<br><span class="wwo-card-note">शुद्ध साबुत एवं पिसे हुए</span></div>
+          </div>
+          <div class="wwo-card">
+            <div class="wwo-card-icon">🥜</div>
+            <div class="wwo-card-label">ड्राई फ्रूट्स</div>
+            <div class="wwo-card-sub">Premium Quality Dry Fruits<br><span class="wwo-card-note">उच्च कोटि (Premium Quality)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Free Home Delivery Banner ────────────────────────── -->
+      <div class="delivery-banner" aria-label="Free home delivery information">
+        <div class="delivery-banner-trust">
+          <span class="delivery-banner-icon">📢</span>
+          <p class="delivery-banner-trust-text">एक बार ऑर्डर करें और हमारी क्वालिटी चेक करें</p>
+          <p class="delivery-banner-trust-sub">हम आपको विश्वास दिलाते हैं कि आपको क्वालिटी जरूर पसंद आएगी।</p>
+        </div>
+        <div class="delivery-banner-main">
+          <span class="delivery-banner-truck">🚚</span>
+          <p class="delivery-banner-free">FREE</p>
+          <p class="delivery-banner-delivery">HOME DELIVERY</p>
+        </div>
+        <div class="delivery-banner-cta">
+          <span class="delivery-banner-icon">📍</span>
+          <p class="delivery-banner-cta-text">घर बैठे ऑर्डर करें</p>
+          <p class="delivery-banner-cta-sub">और पाएं बिल्कुल <strong>फ्री होम डिलीवरी!</strong></p>
+        </div>
+      </div>
 
       <!-- Footer -->
       <footer class="site-footer" role="contentinfo">

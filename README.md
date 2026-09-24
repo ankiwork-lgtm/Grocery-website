@@ -13,8 +13,12 @@ A mobile-first grocery ordering website built with pure HTML, CSS, and Vanilla J
 - Add to cart with quantity controls
 - Cart persists across page refreshes (LocalStorage)
 - Checkout with form validation
-- WhatsApp order delivery (Click-to-Chat)
+- WhatsApp order delivery (Click-to-Chat) — one-tap from the hero or order summary
+- **Product Marquee Strip** — scrolling ticker displaying the full product range (Hindi + English)
+- **"What We Offer" section** — 4-card grid highlighting Dals, Rice, Spices, and Dry Fruits
+- **Free Home Delivery Banner** — full-width bilingual (Hindi/English) promotional banner
 - Mobile-first responsive design
+- Admin panel for managing products online ([`admin.html`](admin.html))
 - Zero recurring cost (GitHub Pages hosting)
 
 ---
@@ -114,16 +118,17 @@ Edit `data/products.json`. Each product looks like:
 
 ```
 ├── index.html
+├── admin.html          ← Admin panel (manage products online)
 ├── css/
-│   ├── style.css       ← Design system & core styles
-│   └── responsive.css  ← Breakpoints
+│   ├── style.css       ← Design system & core styles (incl. marquee, wwo, delivery banner)
+│   └── responsive.css  ← Breakpoints (incl. marquee, wwo-grid, delivery banner)
 ├── js/
 │   ├── config.js       ← Store configuration (edit this first!)
 │   ├── cart.js         ← Cart logic & LocalStorage
 │   ├── products.js     ← Product rendering & filtering
 │   ├── search.js       ← Search functionality
 │   ├── checkout.js     ← Form validation & WhatsApp
-│   └── app.js          ← App bootstrap & SPA routing
+│   └── app.js          ← App bootstrap, SPA routing & WhatsApp direct action
 ├── data/
 │   ├── products.json   ← Product catalogue (edit to add/remove products)
 │   └── categories.json ← Category list
@@ -152,7 +157,6 @@ Edit `data/products.json`. Each product looks like:
 
 ## 🔮 Future V2 Plans
 
-- Admin panel (add/edit/delete products)
 - Database backend (Firebase or Supabase)
 - Online payment (UPI/Razorpay)
 - Customer accounts & order history

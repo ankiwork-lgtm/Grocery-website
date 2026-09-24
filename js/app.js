@@ -178,6 +178,13 @@ const App = (() => {
       btn.addEventListener("click", () => showScreen("home"));
     });
 
+    // WhatsApp direct action → open WhatsApp chat
+    document.querySelectorAll("[data-action='whatsapp']").forEach(btn => {
+      btn.addEventListener("click", () => {
+        window.open(`https://wa.me/${STORE_CONFIG.whatsappNumber}`, "_blank", "noopener");
+      });
+    });
+
     // Proceed to order → checkout
     const proceedBtn = document.getElementById("btn-proceed-checkout");
     if (proceedBtn) proceedBtn.addEventListener("click", () => showScreen("checkout"));

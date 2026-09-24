@@ -7,7 +7,9 @@
 
 /* ── Small Mobile adjustments (< 360px) ─────────────────────── */
 @media (max-width: 359px) {
-  .hero h1 { font-size: 22px; }
+  .hero h1 { font-size: 24px; }
+  .hero-whatsapp-btn { font-size: 12px; padding: 8px 14px; }
+  .hero-trust-strip { gap: 8px; }
   #categories-grid { grid-template-columns: repeat(4, 1fr); gap: 6px; }
   .category-icon { font-size: 22px; }
   .category-name { font-size: 10px; }
@@ -21,18 +23,19 @@
 
   /* Header */
   .site-header { height: 72px; }
-  .header-logo-name { font-size: 20px; }
+  .header-inner { padding: 0 32px; }
+  .header-logo-name { font-size: 19px; }
   .header-nav {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
   }
-  .header-search-wrap { display: block; }
   .bottom-nav { display: none; }
 
-  /* Hero */
-  .hero { padding: 56px 32px 52px; }
-  .hero h1 { font-size: 36px; }
+  /* Hero — tablet: stack vertically, wider content */
+  .hero { padding: 52px 32px 48px; }
+  .hero-inner { flex-direction: column; }
+  .hero h1 { font-size: 38px; }
   .hero-tagline { font-size: 16px; }
   .hero-search-wrap input { padding: 16px 20px 16px 52px; font-size: 15px; }
   .hero-search-wrap { max-width: 560px; }
@@ -41,6 +44,28 @@
   .section { padding: 36px 32px; }
   .section-title { font-size: 22px; }
   #filter-pills { padding: 20px 32px 0; }
+
+  /* What We Offer */
+  .wwo-grid { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .wwo-card { padding: 24px 20px 22px; }
+  .wwo-card-icon { font-size: 48px; }
+
+  /* Delivery Banner */
+  .delivery-banner {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .delivery-banner-trust,
+  .delivery-banner-main,
+  .delivery-banner-cta {
+    flex: 1;
+    padding: 32px 28px;
+    width: auto;
+  }
+  .delivery-banner-main {
+    padding: 32px 28px;
+  }
+  .delivery-banner-free { font-size: 44px; }
 
   /* Grids */
   #categories-grid { grid-template-columns: repeat(8, 1fr); gap: 12px; }
@@ -84,18 +109,38 @@
 
   /* Header */
   .site-header { height: 76px; }
-  .header-inner { max-width: 1280px; margin: 0 auto; }
+  .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
   .header-nav a { font-size: 15px; }
-  .header-search-wrap input { width: 240px; }
-  .header-search-wrap input:focus { width: 300px; }
 
-  /* Hero */
-  .hero { padding: 72px 32px 68px; }
-  .hero-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-  .hero-content { max-width: 520px; }
-  .hero h1 { font-size: 44px; }
+  /* Hero — 2-column grid layout */
+  .hero { padding: 64px 40px 60px; }
+  .hero-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+  }
+  .hero-content { max-width: 540px; flex-shrink: 0; }
+  .hero h1 { font-size: 46px; }
   .hero-tagline { font-size: 18px; }
   .hero-search-wrap { max-width: 100%; }
+
+  /* Show right visual column on desktop */
+  .hero-visual {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    min-height: 340px;
+    max-width: 400px;
+  }
+  .hero-visual-stage { width: 280px; height: 280px; }
+  .hero-visual-stage::before { width: 280px; height: 280px; }
+  .hero-visual-emoji { font-size: 130px; }
 
   /* Sections */
   .section { padding: 44px 32px; }
@@ -122,7 +167,12 @@
 
 /* ── Wide Desktop (1280px+) ──────────────────────────────────── */
 @media (min-width: 1280px) {
-  .hero h1 { font-size: 50px; }
+  .hero { padding: 80px 40px 72px; }
+  .hero h1 { font-size: 54px; }
+  .hero-visual { max-width: 440px; }
+  .hero-visual-stage { width: 320px; height: 320px; }
+  .hero-visual-stage::before { width: 320px; height: 320px; }
+  .hero-visual-emoji { font-size: 150px; }
   .products-grid { grid-template-columns: repeat(5, 1fr); }
 }
 
