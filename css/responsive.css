@@ -115,12 +115,12 @@
   /* Hero — 2-column grid layout */
   .hero { padding: 64px 40px 60px; }
   .hero-inner {
-    max-width: 1280px;
+    max-width: 1100px;
     margin: 0 auto;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 48px;
+    justify-content: center;
+    gap: 64px;
   }
   .hero-content { max-width: 540px; flex-shrink: 0; }
   .hero h1 { font-size: 46px; }
@@ -138,9 +138,9 @@
     min-height: 340px;
     max-width: 400px;
   }
-  .hero-visual-stage { width: 280px; height: 280px; }
-  .hero-visual-stage::before { width: 280px; height: 280px; }
-  .hero-visual-emoji { font-size: 130px; }
+  .hero-visual-stage { width: 260px; height: 260px; }
+  .hero-visual-stage::before { width: 260px; height: 260px; }
+  .hero-visual-emoji { font-size: 105px; }
 
   /* Sections */
   .section { padding: 44px 32px; }
@@ -168,11 +168,15 @@
 /* ── Wide Desktop (1280px+) ──────────────────────────────────── */
 @media (min-width: 1280px) {
   .hero { padding: 80px 40px 72px; }
+  .hero-inner {
+    max-width: 1100px;
+    justify-content: center;
+  }
   .hero h1 { font-size: 54px; }
   .hero-visual { max-width: 440px; }
-  .hero-visual-stage { width: 320px; height: 320px; }
-  .hero-visual-stage::before { width: 320px; height: 320px; }
-  .hero-visual-emoji { font-size: 150px; }
+  .hero-visual-stage { width: 280px; height: 280px; }
+  .hero-visual-stage::before { width: 280px; height: 280px; }
+  .hero-visual-emoji { font-size: 115px; }
   .products-grid { grid-template-columns: repeat(5, 1fr); }
 }
 

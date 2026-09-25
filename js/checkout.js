@@ -157,6 +157,19 @@ const Checkout = (() => {
       `;
     }
 
+    // Format phone number for button display (e.g. "919250445348" -> "+91 92504 45348")
+    function formatDisplayNumber(numStr) {
+      if (!numStr) return "";
+      const cleaned = String(numStr).replace(/\D/g, "");
+      if (cleaned.length === 12 && cleaned.startsWith("91")) {
+        return `+91 ${cleaned.slice(2, 7)} ${cleaned.slice(7)}`;
+      }
+      if (cleaned.length === 10) {
+        return `+91 ${cleaned.slice(0, 5)} ${cleaned.slice(5)}`;
+      }
+      return numStr;
+    }
+
     // Attach WhatsApp buttons
     [
       { id: "btn-order-whatsapp",   number: STORE_CONFIG.whatsappNumber  },
@@ -164,7 +177,13 @@ const Checkout = (() => {
     ].forEach(({ id, number }) => {
       const waBtn = document.getElementById(id);
       if (waBtn) {
+        const formattedNum = formatDisplayNumber(number);
         const newBtn = waBtn.cloneNode(true);
+        const textSpan = newBtn.querySelector("span:not(.btn-whatsapp-icon)");
+        if (textSpan && formattedNum) {
+          textSpan.textContent = `Send to ${formattedNum}`;
+        }
+        newBtn.setAttribute("aria-label", `Place order on WhatsApp (${formattedNum || number})`);
         waBtn.parentNode.replaceChild(newBtn, waBtn);
         newBtn.addEventListener("click", () => sendToWhatsApp(cartItems, formData, number));
       }
