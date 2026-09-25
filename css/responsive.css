@@ -140,7 +140,7 @@
   }
   .hero-visual-stage { width: 260px; height: 260px; }
   .hero-visual-stage::before { width: 260px; height: 260px; }
-  .hero-visual-emoji { font-size: 105px; }
+  .hero-visual-icon { width: 105px; height: 105px; }
 
   /* Sections */
   .section { padding: 44px 32px; }
@@ -176,7 +176,7 @@
   .hero-visual { max-width: 440px; }
   .hero-visual-stage { width: 280px; height: 280px; }
   .hero-visual-stage::before { width: 280px; height: 280px; }
-  .hero-visual-emoji { font-size: 115px; }
+  .hero-visual-icon { width: 115px; height: 115px; }
   .products-grid { grid-template-columns: repeat(5, 1fr); }
 }
 

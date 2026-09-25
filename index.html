@@ -24,6 +24,72 @@
 </head>
 <body>
 
+<!-- ══════════════════════════════════════════════════════════
+     ICON SPRITE (Lucide icons, inline, hidden)
+═══════════════════════════════════════════════════════════ -->
+<svg style="display:none;" aria-hidden="true">
+  <!-- shopping-basket -->
+  <symbol id="icon-shopping-basket" viewBox="0 0 24 24">
+    <path d="m5 11 4-7"/><path d="m19 11-4-7"/><path d="M2 11h20"/><path d="m3.5 11 1.6 7.4a2 2 0 0 0 2 1.6h9.8a2 2 0 0 0 2-1.6l1.7-7.4"/><path d="m9 11 1 9"/><path d="M4.5 15.5h15"/><path d="m15 11-1 9"/>
+  </symbol>
+  <!-- message-circle -->
+  <symbol id="icon-message-circle" viewBox="0 0 24 24">
+    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+  </symbol>
+  <!-- search -->
+  <symbol id="icon-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+  </symbol>
+  <!-- shopping-bag -->
+  <symbol id="icon-shopping-bag" viewBox="0 0 24 24">
+    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>
+  </symbol>
+  <!-- zap -->
+  <symbol id="icon-zap" viewBox="0 0 24 24">
+    <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+  </symbol>
+  <!-- leaf -->
+  <symbol id="icon-leaf" viewBox="0 0 24 24">
+    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+  </symbol>
+  <!-- truck -->
+  <symbol id="icon-truck" viewBox="0 0 24 24">
+    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>
+  </symbol>
+  <!-- flame -->
+  <symbol id="icon-flame" viewBox="0 0 24 24">
+    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+  </symbol>
+  <!-- package -->
+  <symbol id="icon-package" viewBox="0 0 24 24">
+    <path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/>
+  </symbol>
+  <!-- home -->
+  <symbol id="icon-home" viewBox="0 0 24 24">
+    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+  </symbol>
+  <!-- shield-check -->
+  <symbol id="icon-shield-check" viewBox="0 0 24 24">
+    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>
+  </symbol>
+  <!-- tag -->
+  <symbol id="icon-tag" viewBox="0 0 24 24">
+    <path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/>
+  </symbol>
+  <!-- shopping-cart -->
+  <symbol id="icon-shopping-cart" viewBox="0 0 24 24">
+    <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+  </symbol>
+  <!-- layout-grid -->
+  <symbol id="icon-layout-grid" viewBox="0 0 24 24">
+    <rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>
+  </symbol>
+  <!-- phone -->
+  <symbol id="icon-phone" viewBox="0 0 24 24">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </symbol>
+</svg>
+
   <!-- ══════════════════════════════════════════════════════════
        APP LOADER
   ═══════════════════════════════════════════════════════════ -->
@@ -48,7 +114,7 @@
 
       <!-- Logo -->
       <div class="header-logo" data-nav="home" role="button" tabindex="0" aria-label="Radha Rani Store — Go to home">
-        <span class="header-logo-icon" aria-hidden="true">🪷</span>
+        <img src="images/logo.png" alt="" class="logo-mark" aria-hidden="true">
         <div class="header-logo-text">
           <span class="header-logo-name">Radha Rani Store</span>
           <span class="header-logo-tagline">Fresh Groceries</span>
@@ -66,7 +132,7 @@
       <!-- Right: Cart + Hamburger (search removed — lives in hero) -->
       <div class="header-right">
         <button class="btn-cart-header" data-action="cart" id="header-cart-btn" aria-label="Open cart">
-          <span class="cart-icon" aria-hidden="true">🛒</span>
+          <svg class="icon cart-icon" aria-hidden="true"><use href="#icon-shopping-cart"></use></svg>
           <span class="cart-badge" aria-label="Items in cart" id="header-cart-badge">0</span>
           <span>Cart</span>
         </button>
@@ -82,11 +148,26 @@
 
     <!-- Mobile Nav Drawer -->
     <nav class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Mobile navigation menu" aria-hidden="true">
-      <a href="#" data-nav="home"    class="mobile-nav-link" id="mnav-home">🏠 Home</a>
-      <a href="#" data-nav="products" class="mobile-nav-link" id="mnav-categories">📂 Categories</a>
-      <a href="#" data-action="offers" class="mobile-nav-link" id="mnav-offers">🏷️ Offers</a>
-      <a href="#" data-nav="contact" class="mobile-nav-link" id="mnav-contact">☎️ Contact</a>
-      <a href="#" data-action="cart" class="mobile-nav-link" id="mnav-cart">🛒 Cart</a>
+      <a href="#" data-nav="home" class="mobile-nav-link" id="mnav-home">
+        <svg class="icon" aria-hidden="true"><use href="#icon-home"></use></svg>
+        Home
+      </a>
+      <a href="#" data-nav="products" class="mobile-nav-link" id="mnav-categories">
+        <svg class="icon" aria-hidden="true"><use href="#icon-layout-grid"></use></svg>
+        Categories
+      </a>
+      <a href="#" data-action="offers" class="mobile-nav-link" id="mnav-offers">
+        <svg class="icon" aria-hidden="true"><use href="#icon-tag"></use></svg>
+        Offers
+      </a>
+      <a href="#" data-nav="contact" class="mobile-nav-link" id="mnav-contact">
+        <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+        Contact
+      </a>
+      <a href="#" data-action="cart" class="mobile-nav-link" id="mnav-cart">
+        <svg class="icon" aria-hidden="true"><use href="#icon-shopping-cart"></use></svg>
+        Cart
+      </a>
     </nav>
   </header>
 
@@ -109,7 +190,7 @@
 
             <!-- WhatsApp Pill Button -->
             <button class="hero-whatsapp-btn" data-action="whatsapp" aria-label="Order via WhatsApp">
-              <span class="hero-whatsapp-icon" aria-hidden="true">💬</span>
+              <svg class="icon" aria-hidden="true"><use href="#icon-message-circle"></use></svg>
               Order via WhatsApp
             </button>
 
@@ -125,7 +206,7 @@
 
             <!-- Hero Search Bar -->
             <div class="hero-search-wrap">
-              <span class="hero-search-icon" aria-hidden="true">🔍</span>
+              <svg class="icon hero-search-icon" aria-hidden="true"><use href="#icon-search"></use></svg>
               <input
                 type="search"
                 id="search-input"
@@ -137,13 +218,20 @@
 
             <!-- Primary CTA -->
             <button class="hero-cta-btn" data-action="browse" aria-label="Shop daily deals">
-              🛍️ Shop Daily Deals
+              <svg class="icon" aria-hidden="true"><use href="#icon-shopping-bag"></use></svg>
+              Shop Daily Deals
             </button>
 
             <!-- Trust / Delivery strip -->
             <div class="hero-trust-strip" aria-label="Store highlights">
-              <span class="hero-trust-tag">⚡ Fast Doorstep Delivery</span>
-              <span class="hero-trust-tag">🥬 100% Fresh &amp; Authentic</span>
+              <span class="hero-trust-tag">
+                <svg class="icon" aria-hidden="true"><use href="#icon-zap"></use></svg>
+                Fast Doorstep Delivery
+              </span>
+              <span class="hero-trust-tag">
+                <svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg>
+                100% Fresh &amp; Authentic
+              </span>
             </div>
 
           </div><!-- /hero-content -->
@@ -153,16 +241,16 @@
 
             <!-- Emoji + float cards confined to this stage so cards don't overlap bubbles -->
             <div class="hero-visual-stage">
-              <div class="hero-visual-emoji">🧺</div>
+              <svg class="icon hero-visual-icon" aria-hidden="true"><use href="#icon-shopping-basket"></use></svg>
               <div class="hero-float-card hero-float-card--quality">
-                <span class="float-icon">✅</span>
+                <svg class="icon float-icon" aria-hidden="true" style="color: var(--brand-green);"><use href="#icon-shield-check"></use></svg>
                 <div>
                   <div>100% Quality</div>
                   <div class="hero-float-card-sub">Guaranteed Fresh</div>
                 </div>
               </div>
               <div class="hero-float-card hero-float-card--price">
-                <span class="float-icon">🏷️</span>
+                <svg class="icon float-icon" aria-hidden="true" style="color: var(--primary);"><use href="#icon-tag"></use></svg>
                 <div>
                   <div>Best Prices</div>
                   <div class="hero-float-card-sub">Daily Deals</div>
@@ -172,10 +260,22 @@
 
             <!-- Feature bubbles -->
             <div class="hero-bubbles">
-              <span class="hero-bubble hero-bubble--brand">🚚 Free Home Delivery</span>
-              <span class="hero-bubble hero-bubble--accent">🌶️ Pure Spices</span>
-              <span class="hero-bubble hero-bubble--brand">🥜 Premium Dry Fruits</span>
-              <span class="hero-bubble hero-bubble--accent">🏡 Trusted by Families</span>
+              <span class="hero-bubble hero-bubble--brand">
+                <svg class="icon" aria-hidden="true"><use href="#icon-truck"></use></svg>
+                Free Home Delivery
+              </span>
+              <span class="hero-bubble hero-bubble--accent">
+                <svg class="icon" aria-hidden="true"><use href="#icon-flame"></use></svg>
+                Pure Spices
+              </span>
+              <span class="hero-bubble hero-bubble--brand">
+                <svg class="icon" aria-hidden="true"><use href="#icon-package"></use></svg>
+                Premium Dry Fruits
+              </span>
+              <span class="hero-bubble hero-bubble--accent">
+                <svg class="icon" aria-hidden="true"><use href="#icon-home"></use></svg>
+                Trusted by Families
+              </span>
             </div>
 
           </div><!-- /hero-visual -->

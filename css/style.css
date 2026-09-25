@@ -58,6 +58,19 @@
   --transition-slow: 0.35s ease;
 }
 
+/* ── Icon Sprite Defaults ─────────────────────────────────── */
+.icon {
+  width: 1.15em;
+  height: 1.15em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.2em;
+  flex-shrink: 0;
+}
+
 /* ── Reset & Base ──────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -166,9 +179,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
   gap: 10px;
   cursor: pointer;
 }
-.header-logo-icon {
-  font-size: 28px;
-  line-height: 1;
+.logo-mark {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
 }
 .header-logo-text {
   display: flex;
@@ -253,7 +267,10 @@ h1, h2, h3, h4 { line-height: 1.2; }
   border-color: var(--primary);
   color: var(--primary);
 }
-.btn-cart-header .cart-icon { font-size: 17px; }
+.btn-cart-header .cart-icon {
+  width: 18px;
+  height: 18px;
+}
 .cart-badge {
   display: none;
   position: absolute;
@@ -313,10 +330,6 @@ h1, h2, h3, h4 { line-height: 1.2; }
 .hero-whatsapp-btn:hover {
   background: rgba(37,211,102,0.08);
   transform: translateY(-1px);
-}
-.hero-whatsapp-icon {
-  font-size: 16px;
-  line-height: 1;
 }
 
 /* ── Hero: Headline ─────────────────────────────────────── */
@@ -381,7 +394,8 @@ h1, h2, h3, h4 { line-height: 1.2; }
   left: 18px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 18px;
+  width: 18px;
+  height: 18px;
   color: var(--text-light);
   pointer-events: none;
 }
@@ -456,13 +470,15 @@ h1, h2, h3, h4 { line-height: 1.2; }
   border-radius: 50%;
   z-index: 0;
 }
-.hero-visual-emoji {
+.hero-visual-icon {
   position: relative;
   z-index: 1;
-  font-size: 84px;
-  line-height: 1;
+  width: 100px;
+  height: 100px;
+  color: #C9822B;
   filter: drop-shadow(0 12px 28px rgba(0,0,0,0.10));
   animation: heroFloat 4s ease-in-out infinite;
+  stroke-width: 1.5;
 }
 @keyframes heroFloat {
   0%, 100% { transform: translateY(0); }
@@ -485,7 +501,7 @@ h1, h2, h3, h4 { line-height: 1.2; }
   color: var(--text);
   white-space: nowrap;
 }
-.hero-float-card .float-icon { font-size: 18px; line-height: 1; }
+.hero-float-card .float-icon { width: 20px; height: 20px; flex-shrink: 0; }
 .hero-float-card-sub { font-size: 10px; font-weight: 400; color: var(--text-muted); margin-top: 1px; }
 .hero-float-card--quality {
   top: 8%;
